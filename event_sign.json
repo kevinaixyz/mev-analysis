@@ -1,0 +1,2956 @@
+{
+    "0x00058a56ea94653cdf4f152d227ace22d4c00ad99e2a43f58cb7d9e3feb295f2": {
+        "contracts": [
+            "lending_pool_collateral_manager"
+        ],
+        "event_name": "ReserveUsedAsCollateralEnabled",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x038596bb31e2e7d3d9f184d4c98b310103f6d7f5830e5eec32bffe6f1728f969": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "GuardianAdded",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x03e6352a885adc4cc54767592939c3b1bbd65685658c3beaaba66a888120e217": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogStrategySet",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x04e4f521f16fcfd987978b05504262c2a2db223844977aab000e5accedb2d725": {
+        "contracts": [
+            "lending_pool_addresses_provider"
+        ],
+        "event_name": "ReserveUpdated",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x061c75052be1ee7232bc654d7f489af163c983bb99c5affe5e8fc2e5225cb577": {
+        "contracts": [
+            "0x0689640d190b10765f09310fCfE9C670eDe4E25B"
+        ],
+        "event_name": "CancelVesting",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256",
+            "address",
+            "bool"
+        ]
+    },
+    "0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987": {
+        "contracts": [
+            "ERC777"
+        ],
+        "event_name": "Sent",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "bytes",
+            "bytes"
+        ]
+    },
+    "0x08c379a0afcc32b1a39302f7cb8073359698411ab5fd6e3edb2c02c0b5fba8aa": {
+        "contracts": [
+            "0xC1A900Ae76dB21dC5aa8E418Ac0F4E888A4C7431"
+        ],
+        "event_name": "Error",
+        "input_types": [
+            "string"
+        ]
+    },
+    "0x0c396cd989a39f4459b5fa1aed6a9a8dcdbc45908acfd67e028cd568da98982c": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "Burn",
+        "input_types": [
+            "address",
+            "int24",
+            "int24",
+            "uint128",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9": {
+        "contracts": [
+            "0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac"
+        ],
+        "event_name": "PairCreated",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885": {
+        "contracts": [
+            "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+        ],
+        "event_name": "Mint",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x0fcb429b7790258a8e50ab0f30505a67d74d6571119febb9690e6264594e2e29": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetTargetReserves",
+        "input_types": [
+            "address",
+            "uint104",
+            "uint104"
+        ]
+    },
+    "0x13a533084dcbb1cfe0dbea708ea977223c27c44d94f2fa3867a167c9cd340bf9": {
+        "contracts": [
+            "price_oracle"
+        ],
+        "event_name": "WethSet",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x13ed6866d4e1ee6da46f845c46d7e54120883d75c5ea9a2dacc1c4ca8984ab80": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "Borrow",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x14bba7d3df0797b2f5143e4f2087f29fcd3ee3ec3197d38a7f77f85dc0d0ec63": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "UpdateAssetBorrowCollateralFactor",
+        "input_types": [
+            "address",
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0x1547a878dc89ad3c367b6338b4be6a65a5dd74fb77ae044da1e8747ef1f4f62f": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "AbsorbDebt",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x158b204828f9326d9bb3c2be9336986c14911b4a72b93d1801f207aac3c68b9f": {
+        "contracts": [
+            "0xC1d0b3DE6792Bf6b4b37EccdcC24e45978Cfd2Eb"
+        ],
+        "event_name": "ProxyOssified",
+        "input_types": []
+    },
+    "0x15eeaa57c7bd188c1388020bcadc2c436ec60d647d36ef5b9eb3c742217ddee1": {
+        "contracts": [
+            "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84"
+        ],
+        "event_name": "ProxyDeposit",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31": {
+        "contracts": [
+            "ERC1155"
+        ],
+        "event_name": "ApprovalForAll",
+        "input_types": [
+            "address",
+            "address",
+            "bool"
+        ]
+    },
+    "0x1736faf0e37344d44b8757867808a35e1d4961804de8c3dec2896bf1c1d6fc51": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "UpdateAssetPriceFeed",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x181aa3aa17d4cbf99265dd4443eba009433d3cde79d60164fde1d1a192beb935": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "CommitNewAdmin",
+        "input_types": [
+            "uint256",
+            "address"
+        ]
+    },
+    "0x1835882ee7a34ac194f717a35e09bb1d24c82a3b9d854ab6c9749525b714cdf2": {
+        "contracts": [
+            "0x32296969Ef14EB0c6d29669C550D4a0449130230"
+        ],
+        "event_name": "AmpUpdateStarted",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x198db6e425fb8aafd1823c6ca50be2d51e5764571a5ae0f0f21c6812e45def0b": {
+        "contracts": [
+            "0xF95f069F9AD107938F6ba802a3da87892298610E"
+        ],
+        "event_name": "ManagerChanged",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x1a2a22cb034d26d1854bdc6666a5b91fe25efbbb5dcad3b0355478d6f5c362a1": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "RepayBorrow",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x1a2d760a604c03eaa74e64c0e42f0e4f41824be534853f4c2f3ed42d36fed25c": {
+        "contracts": [
+            "0x4ab2FC6e258a0cA7175D05fF10C5cF798A672cAE"
+        ],
+        "event_name": "CreateStream",
+        "input_types": [
+            "uint256",
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint256",
+            "bool"
+        ]
+    },
+    "0x1ab77a654795da4cfe37c33188e862203ade9a5c7f1a9d4957669b3ccbec9e11": {
+        "contracts": [
+            "collector"
+        ],
+        "event_name": "NewFundsAdmin",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1": {
+        "contracts": [
+            "0xc5578194D457dcce3f272538D1ad52c68d1CE849"
+        ],
+        "event_name": "Sync",
+        "input_types": [
+            "uint112",
+            "uint112"
+        ]
+    },
+    "0x1cc1849a6602c3e91f2088cadea4381cc5717f2f28584197060ed2ebb434c16f": {
+        "contracts": [
+            "incentives_controller"
+        ],
+        "event_name": "DistributionEndUpdated",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x1cf3b03a6cf19fa2baba4df148e9dcabedea7f8a5c07840e207e5c089be95d3e": {
+        "contracts": [
+            "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3"
+        ],
+        "event_name": "BeaconUpgraded",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x1e3daca7fe0d6c7ab58271d196454f1d9e867a09de95666bcad4ab688e750f1a": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBaseTokenPriceFeed",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x1e8f03f716bc104bf7d728131967a0c771e85ab54d09c1e2d6ed9e0bc4e2a16c": {
+        "contracts": [
+            "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD"
+        ],
+        "event_name": "RewardsSent",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x2191aed4c4733c76e08a9e7e1da0b8d87fa98753f22df49231ddc66e0f05f022": {
+        "contracts": [
+            "pool_admin"
+        ],
+        "event_name": "QueuedAction",
+        "input_types": [
+            "bytes32",
+            "address",
+            "uint256",
+            "string",
+            "bytes",
+            "uint256",
+            "bool"
+        ]
+    },
+    "0x22c5b7b2d8561d39f7f210b6b326a1aa69f15311163082308ac4877db6339dc1": {
+        "contracts": [
+            "price_oracle"
+        ],
+        "event_name": "AssetSourceUpdated",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x2422cac5e23c46c890fdcf42d0c64757409df6832174df639337558f09d99c68": {
+        "contracts": [
+            "0x1B0e765F6224C21223AeA2af16c1C46E38885a40"
+        ],
+        "event_name": "RewardClaimed",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x2468f9268c60ad90e2d49edb0032c8a001e733ae888b3ab8e982edf535be1a76": {
+        "contracts": [
+            "incentives_controller"
+        ],
+        "event_name": "RewardsAccrued",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x254723080701bde71d562cad0e967cef23d86bb27ee842c190a2596820f3b241": {
+        "contracts": [
+            "0xbaA999AC55EAce41CcAE355c77809e68Bb345170"
+        ],
+        "event_name": "AddressesProviderUnregistered",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x2694ccb0b585b6a54b8d8b4a47aa874b05c257b43d34e98aee50838be00d3405": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ReserveFactorChanged",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x26f55a85081d24974e85c6c00045d0f0453991e95873f52bff0d21af4079a768": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "AddLiquidity",
+        "input_types": [
+            "address",
+            "uint256[2]",
+            "uint256[2]",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x26f6a048ee9138f2c0ce266f322cb99228e8d619ae2bff30c67f8dcf9d2377b4": {
+        "contracts": [
+            "0x2214A42d8e2A1d20635c2cb0664422c528B6A432"
+        ],
+        "event_name": "DecreaseLiquidity",
+        "input_types": [
+            "uint256",
+            "uint128",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x27f12abfe35860a9a927b465bb3d4a9c23c8428174b83f278fe45ed7b4da2662": {
+        "contracts": [
+            "0x388C818CA8B9251b393131C08a736A67ccB19297"
+        ],
+        "event_name": "ETHReceived",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x298637f684da70674f26509b10f07ec2fbc77a335ab1e7d6215a4b2484d8bb52": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "LiquidateBorrow",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x29db89d45e1a802b4d55e202984fce9faf1d30aedf86503ff1ea0ed9ebb64201": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "TransferCollateral",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x2a368c7f33bb86e2d999940a3989d849031aff29b750f67947e6b8e8c3d2ffd6": {
+        "contracts": [
+            "0xC1A900Ae76dB21dC5aa8E418Ac0F4E888A4C7431"
+        ],
+        "event_name": "Sync",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x2b5508378d7e19e0d5fa338419034731416c4f5b219a10379956f764317fd47e": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "RemoveLiquidityImbalance",
+        "input_types": [
+            "address",
+            "uint256[2]",
+            "uint256[2]",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x2cc4a6aedb45911a1034b2320f16567fa4e2eca3f1f5d3b46804f6bc42b7c3f2": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBaseBorrowMin",
+        "input_types": [
+            "address",
+            "uint104",
+            "uint104"
+        ]
+    },
+    "0x2db38786c10176b033a1608361716b0ca992e3af55dc05b6dc710969790beeda": {
+        "contracts": [
+            "lending_pool_addresses_provider_registry"
+        ],
+        "event_name": "AddressesProviderRegistered",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x2db5ddd0b42bdbca0d69ea16f234a870a485854ae0d91f16643d6f317d8b8994": {
+        "contracts": [
+            "0x827179dD56d07A7eeA32e3873493835da2866976"
+        ],
+        "event_name": "Route",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x2e73b7f1df792712003e6859f940c1e8711c3f1329474771fee71d2ec1163129": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ReserveDecimalsChanged",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d": {
+        "contracts": [
+            "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0"
+        ],
+        "event_name": "RoleGranted",
+        "input_types": [
+            "bytes32",
+            "address",
+            "address"
+        ]
+    },
+    "0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d": {
+        "contracts": [
+            "ERC777"
+        ],
+        "event_name": "Minted",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "bytes",
+            "bytes"
+        ]
+    },
+    "0x2fffc091a501fd91bfbff27141450d3acb40fb8e6d8382b243ec7a812a3aaf87": {
+        "contracts": [
+            "0x6d903f6003cca6255D85CcA4D3B5E5146dC33925"
+        ],
+        "event_name": "CancelTransaction",
+        "input_types": [
+            "bytes32",
+            "address",
+            "uint256",
+            "string",
+            "bytes",
+            "uint256"
+        ]
+    },
+    "0x3067048beee31b25b2f1681f88dac838c8bba36af25bfb2b7cf7473a5847e35f": {
+        "contracts": [
+            "0x2214A42d8e2A1d20635c2cb0664422c528B6A432"
+        ],
+        "event_name": "IncreaseLiquidity",
+        "input_types": [
+            "uint256",
+            "uint128",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x3115d1449a7b732c986cba18244e897a450f61e1bb8d589cd2e69e6c8924f9f7": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "Withdraw",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x3134e8a2e6d97e929a7e54011ea5485d7d196dd5f0ba4d4ef95803e8e3fc257f": {
+        "contracts": [
+            "0xc00e94Cb662C3520282E6f5717214004A7f26888"
+        ],
+        "event_name": "DelegateChanged",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x31a1e0eac44b54ac6c2a2efa87e92c83405ffcf33fceef02a7bca695130e2600": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogWhiteListMasterContract",
+        "input_types": [
+            "address",
+            "bool"
+        ]
+    },
+    "0x351fc5da2fbf480f2225debf3664a4bc90fa9923743aad58b4603f648e931fe0": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "CommitNewFee",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x35b80cd8ea3440e9a8454f116fa658b858da1b64c86c48451f4559cefcdfb56c": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ReserveActivated",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x35ebb489f572b08259fa0a007e62d8390043159fcf4a6c9a517dd1eb4dc77dfc": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetSupplyKink",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0x36c3ab437e6a424ed25dc4bfdeb62706aa06558660fab2dab229d2555adaf89c": {
+        "contracts": [
+            "collector"
+        ],
+        "event_name": "WithdrawFromStream",
+        "input_types": [
+            "uint256",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x3704902f963766a4e561bbaab6e6cdc1b1dd12f6e9e99648da8843b3f46b918d": {
+        "contracts": [
+            "0x000000000022d473030f116ddee9f6b43ac78ba3"
+        ],
+        "event_name": "UnorderedNonceInvalidation",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x39aa22060f8dd4d291720311feedf3b72fef47c06c66ccf5c22b502c62e7550a": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogStrategyDivest",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x3a0ca721fc364424566385a1aa271ed508cc2c0949c2272575fb3013a163a45f": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ReserveInitialized",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x3b0007eb941cf645526cbb3a4fdaecda9d28ce4843167d9263b536a1f1edc0f6": {
+        "contracts": [
+            "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"
+        ],
+        "event_name": "MinterChanged",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x3bad0c59cf2f06e7314077049f48a93578cd16f5ef92329f1dab1420a99c177e": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "ReservesReduced",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x3bbd45b5429b385e3fb37ad5cd1cd1435a3c8ec32196c7937597365a3fd3e99c": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "AddressSetAsProxy",
+        "input_types": [
+            "bytes32",
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x3be39979091ae7ca962aa1c44e645f2df3c221b79f324afa5f44aedc8d2f690d": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "PauseAction",
+        "input_types": [
+            "bool",
+            "bool",
+            "bool",
+            "bool",
+            "bool"
+        ]
+    },
+    "0x3be9b85936d5d30a1655ea116a17ee3d827b2cd428cc026ce5bf2ac46a223204": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogFlashLoan",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "address"
+        ]
+    },
+    "0x3cae9923fd3c2f468aa25a8ef687923e37f957459557c0380fd06526c0b8cdbc": {
+        "contracts": [
+            "0xC1A900Ae76dB21dC5aa8E418Ac0F4E888A4C7431"
+        ],
+        "event_name": "Withdrawn",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x3da528dfe78562a1f409134989443b5f21ee92023a64b90dedeb2002415189b6": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "CometDeployed",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x3e350b41e86a8e10f804ade6d35340d620be35569cc75ac943e8bb14ab80ead1": {
+        "contracts": [
+            "0x32296969Ef14EB0c6d29669C550D4a0449130230"
+        ],
+        "event_name": "OracleEnabledChanged",
+        "input_types": [
+            "bool"
+        ]
+    },
+    "0x40d0efd1a53d60ecbf40971b9daf7dc90178c3aadc7aab1765632738fa8b8f01": {
+        "contracts": [
+            "0x2214A42d8e2A1d20635c2cb0664422c528B6A432"
+        ],
+        "event_name": "Collect",
+        "input_types": [
+            "uint256",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x44c58d81365b66dd4b1a7f36c25aa97b8c71c361ee4937adc1a00000227db5dd": {
+        "contracts": [
+            "lending_pool_collateral_manager"
+        ],
+        "event_name": "ReserveUsedAsCollateralDisabled",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x45b96fe442630264581b197e84bbada861235052c5a1aadfff9ea4e40a969aa0": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "Failure",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x46e22fb3709ad289f62ce63d469248536dbc78d82b84a3d7e74ad606dc201938": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "StopRampA",
+        "input_types": [
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x4925eafc82d0c4d67889898eeed64b18488ab19811e61620f387026dec126a28": {
+        "contracts": [
+            "incentives_controller"
+        ],
+        "event_name": "ClaimerSet",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x49f5627aa055ec3fcd474f99c8b7799b798c04af7b9f215305512c867e5a1839": {
+        "contracts": [
+            "0xF95f069F9AD107938F6ba802a3da87892298610E"
+        ],
+        "event_name": "AllowedListUpdated",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb": {
+        "contracts": [
+            "ERC1155"
+        ],
+        "event_name": "TransferBatch",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256[]",
+            "uint256[]"
+        ]
+    },
+    "0x4a465a9bd819d9662563c1e11ae958f8109e437e7f4bf1c6ef0b9a7b3f35d478": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "ProxyCreated",
+        "input_types": [
+            "bytes32",
+            "address",
+            "address"
+        ]
+    },
+    "0x4bce180f5fbcc3f04e85605e3179ceaa66041248373ced1a406d4c44d91e3797": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "UpdateAssetLiquidationFactor",
+        "input_types": [
+            "address",
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "Mint",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x4cdde6e09bb755c9a5589ebaec640bbfedff1362d4b255ebf8339782b9942faa": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "Repay",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x4d72502b63cfe737b98b225a53708fe347cf8274baed31e0c4e4941b758da992": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "MaxDepositsChanged",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x4dec04e750ca11537cabcd8a9eab06494de08da3735bc8871cd41250e190bc04": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "AccrueInterest",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1": {
+        "contracts": [
+            "ERC777"
+        ],
+        "event_name": "RevokedOperator",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x5326514eeca90494a14bedabcff812a0e683029ee85d1e23824d44fd14cd6ae7": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "PriceOracleSentinelUpdated",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x54b27c9d187943783592d79e0380d54f9a545d098bd921e5919d4b3305bd603f": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetGovernor",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x55eb90d810e1700b35a8e7e25395ff7f2b2259abd7415ca2284dfb1c246418f3": {
+        "contracts": [
+            "0x000000000022d473030f116ddee9f6b43ac78ba3"
+        ],
+        "event_name": "NonceInvalidation",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint48",
+            "uint48"
+        ]
+    },
+    "0x56027dd4756fabe0c40c7de2c732b95d170796feaf975883a17a087b3718e6b9": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetSupplyPerYearInterestRateBase",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0x561b42b6b7ded5005c55634f0a6bd24d306cb04b04533bab7e1a644b67245486": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "UpdateAssetSupplyCap",
+        "input_types": [
+            "address",
+            "address",
+            "uint128",
+            "uint128"
+        ]
+    },
+    "0x5637d7f962248a7f05a7ab69eec6446e31f3d0a299d997f135a65c62806e7891": {
+        "contracts": [
+            "incentives_controller"
+        ],
+        "event_name": "RewardsClaimed",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x5644b64ebb0ce18c4032248ca52f58355469092ff072866c3dcd8640e817d6a5": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ReserveInterestRateStrategyChanged",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x56b5f80d8cac1479698aa7d01605fd6111e90b15fc4d2b377417f46034876cbd": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "PriceOracleUpdated",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x5777ca300dfe5bead41006fbce4389794dbc0ed8d6cccebfaf94630aa04184bc": {
+        "contracts": [
+            "incentives_controller"
+        ],
+        "event_name": "AssetIndexUpdated",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x596b573906218d3411850b26a6b437d6c4522fdb43d2d2386263f86d50b8b151": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "CollectProtocol",
+        "input_types": [
+            "address",
+            "address",
+            "uint128",
+            "uint128"
+        ]
+    },
+    "0x5f6ebb64ba012a851c6f014e6cad458ddf213d1512049b31cd06365c2b059257": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogSetMasterContractApproval",
+        "input_types": [
+            "address",
+            "address",
+            "bool"
+        ]
+    },
+    "0x5fd68dea96a9ad4e6dc9cfad3617d7eb84c2070e6352848fb091a254f4629e92": {
+        "contracts": [
+            "0x91ae842A5Ffd8d12023116943e72A606179294f3"
+        ],
+        "event_name": "UpdateTokenRatioPriority",
+        "input_types": [
+            "address",
+            "int256"
+        ]
+    },
+    "0x603bb53f65550199ed7346ba18d49bcb7ec77162b3167b272f8cd19b20d9510b": {
+        "contracts": [
+            "0x0689640d190b10765f09310fCfE9C670eDe4E25B"
+        ],
+        "event_name": "CreateVesting",
+        "input_types": [
+            "uint256",
+            "address",
+            "address",
+            "address",
+            "uint32",
+            "uint32",
+            "uint32",
+            "uint32",
+            "uint128",
+            "uint128",
+            "bool"
+        ]
+    },
+    "0x631042c832b07452973831137f2d73e395028b44b250dedc5abb0ee766e168ac": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "FlashLoan",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint16"
+        ]
+    },
+    "0x635524bd339ec1b914f9b13607c72592cfa9538a3c56170a59094dde834bb41d": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBaseMinForRewards",
+        "input_types": [
+            "address",
+            "uint104",
+            "uint104"
+        ]
+    },
+    "0x637febbda9275aea2e85c0ff690444c8d87eb2e8339bbede9715abcc89cb0995": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "CollateralConfigurationChanged",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x6985a02210a168e66602d3235cb6db0e70f92b3ba4d376a33c0f3d9434bff625": {
+        "contracts": [
+            "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+        ],
+        "event_name": "Pause",
+        "input_types": []
+    },
+    "0x69d78e38a01985fbb1462961809b4b2d65531bc93b2b94037f3334b82ca4a756": {
+        "contracts": [
+            "pool_admin"
+        ],
+        "event_name": "NewPendingAdmin",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x6a30e6784464f0d1f4158aa4cb65ae9239b0fa87c7f2c083ee6dde44ba97b5e6": {
+        "contracts": [
+            "0xD15a672319Cf0352560eE76d9e89eAB0889046D3"
+        ],
+        "event_name": "ERC721Recovered",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b": {
+        "contracts": [
+            "ERC1155"
+        ],
+        "event_name": "URI",
+        "input_types": [
+            "string",
+            "uint256"
+        ]
+    },
+    "0x6eabe333476233fd382224f233210cb808a7bc4c4de64f9d76628bf63c677b1a": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogTransfer",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x6f60cf8bd0f218cabe1ea3150bd07b0b758c35c4cfdf7138017a283e65564d5e": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ReserveDeactivated",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x6f7ccdf3f86039e5a1dcf6028bf7b4773cbf7a234716ba2e5392b12bb0f8558f": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogStrategyQueued",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x6fadb1c244276388aee22be93b919985a18748c021e5d48553957a48101a2560": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "GovernorTransferred",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x70935338e69775456a85ddef226c395fb668b63fa0115f5f20610b388e6ca9c0": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "Collect",
+        "input_types": [
+            "address",
+            "address",
+            "int24",
+            "int24",
+            "uint128",
+            "uint128"
+        ]
+    },
+    "0x70d7432f2ec830b36e5b8c45176a8079968714429c4be85665c06ec1b8fde4bb": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "GuardianQuorumChanged",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x712ae1383f79ac853f8d882153778e0260ef8f03b504e2866e0593e04d2b291f": {
+        "contracts": [
+            "0xc0Da02939E1441F497fd74F78cE7Decb17B66529"
+        ],
+        "event_name": "ProposalExecuted",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x71614071b88dee5e0b2ae578a9dd7b2ebbe9ae832ba419dc0242cd065a290b6c": {
+        "contracts": [
+            "pool_admin"
+        ],
+        "event_name": "NewAdmin",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x73153d5fd218c784e1e09f75dfedf022e00ce0de9d024d03eb761c5c94359944": {
+        "contracts": [
+            "0xF95f069F9AD107938F6ba802a3da87892298610E"
+        ],
+        "event_name": "RelayAdded",
+        "input_types": [
+            "string",
+            "tuple"
+        ]
+    },
+    "0x7543af99b5602c06e62da0631b5308489a5ff859150105a623b6eb15e8deae0b": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogStrategyTargetPercentage",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x76e2796dc3a81d57b0e8504b647febcbeeb5f4af818e164f11eef8131a6a763f": {
+        "contracts": [
+            "0x6d903f6003cca6255D85CcA4D3B5E5146dC33925"
+        ],
+        "event_name": "QueueTransaction",
+        "input_types": [
+            "bytes32",
+            "address",
+            "uint256",
+            "string",
+            "bytes",
+            "uint256"
+        ]
+    },
+    "0x7805862f689e2f13df9f062ff482ad3ad112aca9e0847911ed832e158c525b33": {
+        "contracts": [
+            "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+        ],
+        "event_name": "Unpause",
+        "input_types": []
+    },
+    "0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118": {
+        "contracts": [
+            "0xbACEB8eC6b9355Dfc0269C18bac9d6E2Bdc29C4F"
+        ],
+        "event_name": "PoolCreated",
+        "input_types": [
+            "address",
+            "address",
+            "uint24",
+            "int24",
+            "address"
+        ]
+    },
+    "0x789cf55be980739dad1d0699b93b58e806b51c9d96619bfa8fe0a28abaa7b30c": {
+        "contracts": [
+            "0xc0Da02939E1441F497fd74F78cE7Decb17B66529"
+        ],
+        "event_name": "ProposalCanceled",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "Mint",
+        "input_types": [
+            "address",
+            "address",
+            "int24",
+            "int24",
+            "uint128",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x7a943a5b6c214bf7726c069a878b1e2a8e7371981d516048b84e03743e67bc28": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "StableDebtTokenUpgraded",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x7ac369dbd14fa5ea3f473ed67cc9d598964a77501540ba6751eb0b3decf5870d": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "NewComptroller",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x7b01d409597969366dc268d7f957a990d1ca3d3449baf8fb45db67351aecfe78": {
+        "contracts": [
+            "collector"
+        ],
+        "event_name": "CreateStream",
+        "input_types": [
+            "uint256",
+            "address",
+            "address",
+            "uint256",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x7c363854ccf79623411f8995b362bce5eddff18c927edc6f5dbbb5e05819a82c": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "RemoveLiquidity",
+        "input_types": [
+            "address",
+            "uint256[2]",
+            "uint256[2]",
+            "uint256"
+        ]
+    },
+    "0x7d84a6263ae0d98d3329bd7b46bb4e8d6f98cd35a7adb45c274c8b7fd5ebd5e0": {
+        "contracts": [
+            "0xc0Da02939E1441F497fd74F78cE7Decb17B66529"
+        ],
+        "event_name": "ProposalCreated",
+        "input_types": [
+            "uint256",
+            "address",
+            "address[]",
+            "uint256[]",
+            "string[]",
+            "bytes[]",
+            "uint256",
+            "uint256",
+            "string"
+        ]
+    },
+    "0x7e237d05d262a573a6b2d126c2065264a3bcabb68e67a1d5a1e88b1dbef6666d": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBorrowPerYearInterestRateBase",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0x7e3f7f0708a84de9203036abaa450dccc85ad5ff52f78c170f3edb55cf5e8828": {
+        "contracts": [
+            "0xc0Da02939E1441F497fd74F78cE7Decb17B66529"
+        ],
+        "event_name": "VotingPeriodSet",
+        "input_types": [
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f": {
+        "contracts": [
+            "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3"
+        ],
+        "event_name": "AdminChanged",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65": {
+        "contracts": [
+            "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+        ],
+        "event_name": "Withdrawal",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x804c9b842b2748a22bb64b345453a3de7ca54a6ca45ce00d415894979e22897a": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "ReserveDataUpdated",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x8120886d27fee35672e5d5a482d6c858105aebb26caf12178b8c0034fa88c2ba": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "PauseIntentValidityPeriodBlocksChanged",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x838ecdc4709a31a26db48b0c853212cedde3f725f07030079d793fb071964760": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ReserveUnfrozen",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x851e5971c053e6b76e3a1e0b8ffa81430df738007fad86e195c409a757faccd2": {
+        "contracts": [
+            "lending_pool_addresses_provider_registry"
+        ],
+        "event_name": "AddressesProviderUnregistered",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x85dc710add8a0914461a7dc5a63f6fc529a7700f8c6089a3faf5e93256ccf12a": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ReserveFrozen",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x8619312ed4eff1cf9f0116e6db2f49d9570a86f0350d1c5ad1bd0f7b0cf9e132": {
+        "contracts": [
+            "0xF95f069F9AD107938F6ba802a3da87892298610E"
+        ],
+        "event_name": "ERC20Recovered",
+        "input_types": [
+            "address",
+            "uint256",
+            "address"
+        ]
+    },
+    "0x864cdb8aef050e3718f73f8f3512418f04745083156b40523b128e79b411fc2d": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetStoreFrontPriceFactor",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0x875352fb3fadeb8c0be7cbbe8ff761b308fa7033470cd0287f02f3436fd76cb9": {
+        "contracts": [
+            "0x39AA39c021dfbaE8faC545936693aC917d5E7563"
+        ],
+        "event_name": "AccrueInterest",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x87c481aa909c37502caa37394ab791c26b68fa4fa5ae56de104de36444ae9069": {
+        "contracts": [
+            "pool_admin"
+        ],
+        "event_name": "CancelledAction",
+        "input_types": [
+            "bytes32",
+            "address",
+            "uint256",
+            "string",
+            "bytes",
+            "uint256",
+            "bool"
+        ]
+    },
+    "0x87fa03892a0556cb6b8f97e6d533a150d4d55fcbf275fff5fa003fa636bcc7fa": {
+        "contracts": [
+            "incentives_controller"
+        ],
+        "event_name": "AssetConfigUpdated",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x8833fc597fe752547ef2d61e248ec107040988e2f7f5d0d739345b6aaf6f3a97": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetConfiguration",
+        "input_types": [
+            "address",
+            "tuple",
+            "tuple"
+        ]
+    },
+    "0x8932892569eba59c8382a089d9b732d1f49272878775235761a2a6b0309cd465": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "PoolConfiguratorUpdated",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x8959e4c88e5192ecbc28d08be97f24786bf591eb1d1848ce23e17e1b2271e863": {
+        "contracts": [
+            "0xD15a672319Cf0352560eE76d9e89eAB0889046D3"
+        ],
+        "event_name": "StETHBurnt",
+        "input_types": [
+            "bool",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x89b1add15eff56b3dfe299ad94e01f2b52fbcb80ae1a3baea6ae8c04cb2b98a4": {
+        "contracts": [
+            "0x000000000022d473030f116ddee9f6b43ac78ba3"
+        ],
+        "event_name": "Lockdown",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x8b3e96f2b889fa771c53c981b40daf005f63f637f1869f707052d15a3dd97140": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "TokenExchange",
+        "input_types": [
+            "address",
+            "int128",
+            "uint256",
+            "int128",
+            "uint256"
+        ]
+    },
+    "0x8bab6aed5a508937051a144e61d6e61336834a66aaee250a00613ae6f744c422": {
+        "contracts": [
+            "0xC1A900Ae76dB21dC5aa8E418Ac0F4E888A4C7431"
+        ],
+        "event_name": "Deposited",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x8bbf35441ac2c607ddecadd3d8ee58636d32f217fad201fb2655581502dd84e3": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "StableRateDisabledOnReserve",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "OwnershipTransferred",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
+        "contracts": [
+            "ERC20"
+        ],
+        "event_name": "Approval",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x8deda66e5f5ef6c43f45734b544b27efe7fe2cd80a4b7fbf5c789aa69c024818": {
+        "contracts": [
+            "0x4ab2FC6e258a0cA7175D05fF10C5cF798A672cAE"
+        ],
+        "event_name": "Withdraw",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "address",
+            "address",
+            "bool"
+        ]
+    },
+    "0x8dee2b2f3e98319ae6347eda521788f73f4086c9be9a594942b370b137fb8cb1": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "StableRateEnabledOnReserve",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0x8f1f26eb9b6aa8689dbdd519ead1999d9c8819d4738e403b2003b18197d9cf97": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogStrategyLoss",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x90affc163f1a2dfedcd36aa02ed992eeeba8100a4014f0b4cdc20ea265a66627": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "PoolUpdated",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x911c9f20a03edabcbcbd18dca1174cce47a91b234ced7a5a3c60ba0d5b56c5d2": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogStrategyProfit",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0x9271fee6b1a08ee27e11f6eb16d888ac12b7a2c3d1a8db5104de1fa9f197f215": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "UpdateAsset",
+        "input_types": [
+            "address",
+            "tuple",
+            "tuple"
+        ]
+    },
+    "0x9439658a562a5c46b1173589df89cf001483d685bad28aedaff4a88656292d81": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "VariableDebtTokenUpgraded",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0x948b1f6a42ee138b7e34058ba85a37f716d55ff25ff05a763f15bed6a04c8d2c": {
+        "contracts": [
+            "pool_admin"
+        ],
+        "event_name": "NewDelay",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0x973d8d92bb299f4af6ce49b52a8adb85ae46b9f214c4c4fc06ac77401237b133": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "SetFeeProtocol",
+        "input_types": [
+            "uint8",
+            "uint8",
+            "uint8",
+            "uint8"
+        ]
+    },
+    "0x97825080b472fa91fe888b62ec128814d60dec546a2dafb955e50923f4a1b7e7": {
+        "contracts": [
+            "pool_admin"
+        ],
+        "event_name": "ExecutedAction",
+        "input_types": [
+            "bytes32",
+            "address",
+            "uint256",
+            "string",
+            "bytes",
+            "uint256",
+            "bool",
+            "bytes"
+        ]
+    },
+    "0x9850ab1af75177e4a9201c65a2cf7976d5d28e40ef63494b44366f86b2f9412e": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "AbsorbCollateral",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x98636036cb66a9c19a37435efc1e90142190214e8abeb821bdba3f2990dd4c95": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "Initialize",
+        "input_types": [
+            "uint160",
+            "int24"
+        ]
+    },
+    "0x9a2e42fd6722813d69113e7d0079d3d940171428df7373df9c7f7617cfda2892": {
+        "contracts": [
+            "0xc0Da02939E1441F497fd74F78cE7Decb17B66529"
+        ],
+        "event_name": "ProposalQueued",
+        "input_types": [
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x9b1bfa7fa9ee420a16e124f794c35ac9f90472acc99140eb2f6447c714cad8eb": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "Withdraw",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0x9e2386766b478abaf84b870cc94441fee88f4a0d3ab18b96e523f193a695f3a1": {
+        "contracts": [
+            "0x4ab2FC6e258a0cA7175D05fF10C5cF798A672cAE"
+        ],
+        "event_name": "UpdateStream",
+        "input_types": [
+            "uint256",
+            "uint128",
+            "uint64",
+            "bool"
+        ]
+    },
+    "0x9e3a5e37224532dea67b89face185703738a228a6e8a23dee546960180d3be64": {
+        "contracts": [
+            "0x32296969Ef14EB0c6d29669C550D4a0449130230"
+        ],
+        "event_name": "PausedStateChanged",
+        "input_types": [
+            "bool"
+        ]
+    },
+    "0x9e87fac88ff661f02d44f95383c817fece4bce600a3dab7a54406878b965e752": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "Paused",
+        "input_types": []
+    },
+    "0x9e96dd3b997a2a257eec4df9bb6eaf626e206df5f543bd963682d143300be310": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "RemoveLiquidityOne",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0x9ef0e8c8e52743bb38b83b17d9429141d494b8041ca6d616a6c77cebae9cd8b7": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "AddressSet",
+        "input_types": [
+            "bytes32",
+            "address",
+            "address"
+        ]
+    },
+    "0x9f439ae0c81e41a04d3fdfe07aed54e6a179fb0db15be7702eb66fa8ef6f5300": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "RebalanceStableBorrowRate",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0x9fd77f9236bc26e7c30eaa679ccff4200f9a813e5950b2904c29f11d0b5f2a5e": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetSupplyPerYearInterestRateSlopeHigh",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0xa078c4190abe07940190effc1846be0ccf03ad6007bc9e93f9697d0b460befbb": {
+        "contracts": [
+            "0x78F8Bd884C3D738B74B420540659c82f392820e0"
+        ],
+        "event_name": "Swapped",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xa0b7f0a9bb410971c133acc48cc1b77dc067cb188643c832d0b11593f59c301b": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "DepositsPaused",
+        "input_types": [
+            "address",
+            "uint24"
+        ]
+    },
+    "0xa0d01593e47e69d07e0ccd87bece09411e07dd1ed40ca8f2e7af2976542a0233": {
+        "contracts": [
+            "0x32296969Ef14EB0c6d29669C550D4a0449130230"
+        ],
+        "event_name": "AmpUpdateStopped",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0xa2b71ec6df949300b59aab36b55e189697b750119dd349fcfa8c0f779e83c254": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "RampA",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xa2ea9883a321a3e97b8266c2b078bfeec6d50c711ed71f874a90d500ae2eaf36": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "OwnerChanged",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0xa45f47fdea8a1efdd9029a5691c7f759c32b7c698632b563573e155625d16933": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "Unpaused",
+        "input_types": []
+    },
+    "0xa560e3198060a2f10670c1ec5b403077ea6ae93ca8de1c32b451dc1a943cd6e7": {
+        "contracts": [
+            "0x6d903f6003cca6255D85CcA4D3B5E5146dC33925"
+        ],
+        "event_name": "ExecuteTransaction",
+        "input_types": [
+            "bytes32",
+            "address",
+            "uint256",
+            "string",
+            "bytes",
+            "uint256"
+        ]
+    },
+    "0xa76f65411ec66a7fb6bc467432eb14767900449ae4469fa295e4441fe5e1cb73": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "ATokenUpgraded",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098": {
+        "contracts": [
+            "ERC777"
+        ],
+        "event_name": "Burned",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "bytes",
+            "bytes"
+        ]
+    },
+    "0xa91e67c5ea634cd43a12c5a482724b03de01e85ca68702a53d0c2f45cb7c1dc5": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "ReservesAdded",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xa9ba3ffe0b6c366b81232caab38605a0699ad5398d6cce76f91ee809e322dafc": {
+        "contracts": [
+            "0x32296969Ef14EB0c6d29669C550D4a0449130230"
+        ],
+        "event_name": "SwapFeePercentageChanged",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0xaaa68312e2ea9d50e16af5068410ab56e1a1fd06037b1a35664812c30f821460": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "NewReserveFactor",
+        "input_types": [
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xab2f7f9e5ca2772fafa94f355c1842a80ae6b9e41f83083098d81f67d7a0b508": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "BorrowingEnabledOnReserve",
+        "input_types": [
+            "address",
+            "bool"
+        ]
+    },
+    "0xac49e518f90a358f652e4400164f05a5d8f7e35e7747279bc3a93dbf584e125a": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "IncreaseObservationCardinalityNext",
+        "input_types": [
+            "uint16",
+            "uint16"
+        ]
+    },
+    "0xaca8fb252cde442184e5f10e0f2e6e4029e8cd7717cae63559079610702436aa": {
+        "contracts": [
+            "0xD15a672319Cf0352560eE76d9e89eAB0889046D3"
+        ],
+        "event_name": "ERC20Recovered",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0xad9ab9ee6953d4d177f4a03b3a3ac3178ffcb9816319f348060194aa76b14486": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogWithdraw",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xae5184fba832cb2b1f702aca6117b8d265eaf03ad33eb133f19dde0f5920fa08": {
+        "contracts": [
+            "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+        ],
+        "event_name": "MintFinished",
+        "input_types": []
+    },
+    "0xaf80475c4b413d347b2ac9b71b6c734ba09a6f4771aba12edc65346cffe273f5": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBaseTrackingSupplySpeed",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0xb18e7e4f6eac147a63a3bb6beb2d9039c88698623aff3efc4febbc20b0164ee5": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogStrategyInvest",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0xb2346165e782564f17f5b7e555c21f4fd96fbc93458572bf0113ea35a958fc55": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogDeposit",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xb30efa04327bb8a537d61cc1e5c48095345ad18ef7cc04e6bacf7dfb6caaf507": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "ACLManagerUpdated",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c": {
+        "contracts": [
+            "0xbACEB8eC6b9355Dfc0269C18bac9d6E2Bdc29C4F"
+        ],
+        "event_name": "OwnerChanged",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xb60cc4e8fd32e3f131099a821d4716afdb1e906f90421b5edb21070d209d0ee2": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetPauseGuardian",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0xb76e70514ce71ea8144278de4cb58afc6c323447436371f6fe49e145ffdc540b": {
+        "contracts": [
+            "0x4ab2FC6e258a0cA7175D05fF10C5cF798A672cAE"
+        ],
+        "event_name": "CancelStream",
+        "input_types": [
+            "uint256",
+            "uint256",
+            "uint256",
+            "address",
+            "bool"
+        ]
+    },
+    "0xb8107d0c6b40be480ce3172ee66ba6d64b71f6b1685a851340036e6e2e3e3c52": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "GuardianRemoved",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0xb861fabb6dfce807f39e6f400693b8a826dcd89a4ce4ff8e955f6c4ddec398a3": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "DepositsUnpaused",
+        "input_types": [
+            "uint24"
+        ]
+    },
+    "0xb8e138887d0aa13bab447e82de9d5c1777041ecd21ca36ba824ff1e6c07ddda4": {
+        "contracts": [
+            "0xc0Da02939E1441F497fd74F78cE7Decb17B66529"
+        ],
+        "event_name": "VoteCast",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint8",
+            "uint256",
+            "string"
+        ]
+    },
+    "0xbb123b5c06d5408bbea3c4fef481578175cfb432e3b482c6186f02ed9086585b": {
+        "contracts": [
+            "incentives_controller"
+        ],
+        "event_name": "UserIndexUpdated",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b": {
+        "contracts": [
+            "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3"
+        ],
+        "event_name": "Upgraded",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0xbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff": {
+        "contracts": [
+            "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0"
+        ],
+        "event_name": "RoleAdminChanged",
+        "input_types": [
+            "bytes32",
+            "bytes32",
+            "bytes32"
+        ]
+    },
+    "0xbd99c6719f088aa0abd9e7b7a4a635d1f931601e9f304b538dc42be25d8c65c6": {
+        "contracts": [
+            "0xC1A900Ae76dB21dC5aa8E418Ac0F4E888A4C7431"
+        ],
+        "event_name": "Swapped",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256",
+            "address"
+        ]
+    },
+    "0xbdbdb71d7860376ba52b25a5028beea23581364a40522f6bcfb86bb1f2dca633": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "Flash",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xbdfea73f1d581ded04f608d47cd124146963b03795e30c9f9e16d57bb1fed652": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "UpdateAssetLiquidateCollateralFactor",
+        "input_types": [
+            "address",
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0xbe12859b636aed607d5230b2cc2711f68d70e51060e6cca1f575ef5d2fcc95d1": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "NewFee",
+        "input_types": [
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xbf77fd13a39d14dc0da779342c14105c38d9a5d0c60f2caa22f5fd1d5525416d": {
+        "contracts": [
+            "0x78F8Bd884C3D738B74B420540659c82f392820e0"
+        ],
+        "event_name": "Bought",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xc1a224b14823b63c7711127f125fbf592434682f38881ebb61408747a303affc": {
+        "contracts": [
+            "0x32296969Ef14EB0c6d29669C550D4a0449130230"
+        ],
+        "event_name": "PriceRateCacheUpdated",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0xc2e7cc813550ef0e7126cc0571281850ce5df2e9c400acf3589c38e4627f85f1": {
+        "contracts": [
+            "0xbaA999AC55EAce41CcAE355c77809e68Bb345170"
+        ],
+        "event_name": "AddressesProviderRegistered",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62": {
+        "contracts": [
+            "ERC1155"
+        ],
+        "event_name": "TransferSingle",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67": {
+        "contracts": [
+            "pool"
+        ],
+        "event_name": "Swap",
+        "input_types": [
+            "address",
+            "address",
+            "int256",
+            "int256",
+            "uint160",
+            "uint128",
+            "int24"
+        ]
+    },
+    "0xc565b045403dc03c2eea82b81a0465edad9e2e7fc4d97e11421c209da93d7a93": {
+        "contracts": [
+            "0xc0Da02939E1441F497fd74F78cE7Decb17B66529"
+        ],
+        "event_name": "VotingDelaySet",
+        "input_types": [
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xc66a3fdf07232cdd185febcc6579d408c241b47ae2f9907d84be655141eeaecc": {
+        "contracts": [
+            "0xbACEB8eC6b9355Dfc0269C18bac9d6E2Bdc29C4F"
+        ],
+        "event_name": "FeeAmountEnabled",
+        "input_types": [
+            "uint24",
+            "int24"
+        ]
+    },
+    "0xc6a377bfc4eb120024a8ac08eef205be16b817020812c73223e81d1bdb9708ec": {
+        "contracts": [
+            "0x000000000022d473030f116ddee9f6b43ac78ba3"
+        ],
+        "event_name": "Permit",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint160",
+            "uint48",
+            "uint48"
+        ]
+    },
+    "0xc6a898309e823ee50bac64e45ca8adba6690e99e7841c45d754e2a38e9019d9b": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "Borrow",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint16"
+        ]
+    },
+    "0xc853974cfbf81487a14a23565917bee63f527853bcb5fa54f2ae1cdf8a38356d": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "PoolDataProviderUpdated",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xc86eba353c79b422cdb4d71fcc7db3615603457a42c0559fcf1b31dfd66920b3": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetExtensionDelegate",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0xc936b3eb07b584b686d11042214266fed11036dbc226159d67b3cfaa4ce26f78": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetSupplyPerYearInterestRateSlopeLow",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0xca0251ba80971adc7e92434b097ca40450b2a317013c51c5c5cb6ae74500bb00": {
+        "contracts": [
+            "0x0689640d190b10765f09310fCfE9C670eDe4E25B"
+        ],
+        "event_name": "LogUpdateOwner",
+        "input_types": [
+            "uint256",
+            "address"
+        ]
+    },
+    "0xca3e6079b726e7728802a0537949e2d1c7762304fa641fb06eb56daf2ba8c6b9": {
+        "contracts": [
+            "collector"
+        ],
+        "event_name": "CancelStream",
+        "input_types": [
+            "uint256",
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xca4f2f25d0898edd99413412fb94012f9e54ec8142f9b093e7720646a95b16a9": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "NewPendingAdmin",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xca6c2c5b6b44b5f3f0c08f0e28e5b6deda1cb38c3fe1113e8031d926c1e8c6d0": {
+        "contracts": [
+            "0x32296969Ef14EB0c6d29669C550D4a0449130230"
+        ],
+        "event_name": "PriceRateProviderSet",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0xcc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca5": {
+        "contracts": [
+            "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+        ],
+        "event_name": "Burn",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0xcc826d20934cb90e9329d09ff55b4e43831c5bb3a3305fb536842ad49041e7d5": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetFactory",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0xccb45da8d5717e6c4544694297c4ba5cf151d455c9bb0ed4fc7a38411bc05461": {
+        "contracts": [
+            "0xc0Da02939E1441F497fd74F78cE7Decb17B66529"
+        ],
+        "event_name": "ProposalThresholdSet",
+        "input_types": [
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xcd38d79accad9a0b2cec7a7f94a4ceb7d9b0df5f35bdcb6ee4212b695fad0aa1": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBaseTrackingBorrowSpeed",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0xce0cf859d853e1944032294143a1bf3ad799998ae77acbeb6c4d9b20d6910240": {
+        "contracts": [
+            "0xC1A900Ae76dB21dC5aa8E418Ac0F4E888A4C7431"
+        ],
+        "event_name": "SlippageFeeVoteUpdate",
+        "input_types": [
+            "address",
+            "uint256",
+            "bool",
+            "uint256"
+        ]
+    },
+    "0xce7a780d33665b1ea097af5f155e3821b809ecbaa839d3b33aa83ba28168cefb": {
+        "contracts": [
+            "price_oracle"
+        ],
+        "event_name": "FallbackOracleUpdated",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0xd013ca23e77a65003c2c659c5442c00c805371b7fc1ebd4c206c41d1536bd90b": {
+        "contracts": [
+            "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+        ],
+        "event_name": "TokenExchangeUnderlying",
+        "input_types": [
+            "address",
+            "int128",
+            "uint256",
+            "int128",
+            "uint256"
+        ]
+    },
+    "0xd02bbeba90c0a3636769d1b8c9f07e2b5e4131b8fbcc2d6ba56054e20b98d75d": {
+        "contracts": [
+            "0x011E52E4E40CF9498c79273329E8827b21E2e581"
+        ],
+        "event_name": "StargateSushiXSwapDst",
+        "input_types": [
+            "bytes32",
+            "bool"
+        ]
+    },
+    "0xd0784d105a7412ffec29813ff8401f04f3d1cdbe6aca756974b1a31f830e5cb7": {
+        "contracts": [
+            "0xC1A900Ae76dB21dC5aa8E418Ac0F4E888A4C7431"
+        ],
+        "event_name": "DecayPeriodVoteUpdate",
+        "input_types": [
+            "address",
+            "uint256",
+            "bool",
+            "uint256"
+        ]
+    },
+    "0xd1cf3d156d5f8f0d50f6c122ed609cec09d35c9b9fb3fff6ea0959134dae424e": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "Supply",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0xd2282bfa24f3803076af0953f1ed987d0e45edacdc20d6dce52337b1c4588cdb": {
+        "contracts": [
+            "0xD15a672319Cf0352560eE76d9e89eAB0889046D3"
+        ],
+        "event_name": "StETHBurnRequested",
+        "input_types": [
+            "bool",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xd604de94d45953f9138079ec1b82d533cb2160c906d1076d1f7ed54befbca97a": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "NewImplementation",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xd62166f3c2149208e51788b1401cc356bf5da1fc6c7886a32e18570f57d88b3b": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogDeploy",
+        "input_types": [
+            "address",
+            "bytes",
+            "address"
+        ]
+    },
+    "0xd6d480d5b3068db003533b170d67561494d72e3bf9fa40a266471351ebba9e16": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "WithdrawCollateral",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822": {
+        "contracts": [
+            "0xc5578194D457dcce3f272538D1ad52c68d1CE849"
+        ],
+        "event_name": "Swap",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256",
+            "uint256",
+            "uint256",
+            "address"
+        ]
+    },
+    "0xda40ea421dd7e42cf8be71255facac4fdc12a3f70f4d5fd373cb16cec4cb5384": {
+        "contracts": [
+            "0x223d844fc4B006D67c0cDbd39371A9F73f69d974"
+        ],
+        "event_name": "EmissionAdminUpdated",
+        "input_types": [
+            "address",
+            "address",
+            "address"
+        ]
+    },
+    "0xda9fa7c1b00402c17d0161b249b1ab8bbec047c5a52207b9c112deffd817036b": {
+        "contracts": [
+            "0x000000000022d473030f116ddee9f6b43ac78ba3"
+        ],
+        "event_name": "Approval",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint160",
+            "uint48"
+        ]
+    },
+    "0xdb69cbc4aa6648b506b7854c26807bfd811c27feaf97ac8847e3a66356cace14": {
+        "contracts": [
+            "0xC77F8768774E1c9244BEed705C4354f2113CFc09"
+        ],
+        "event_name": "MinDepositBlockDistanceChanged",
+        "input_types": [
+            "uint256"
+        ]
+    },
+    "0xdccd412f0b1252819cb1fd330b93224ca42612892bb3f4f789976e6d81936496": {
+        "contracts": [
+            "0xc5578194D457dcce3f272538D1ad52c68d1CE849"
+        ],
+        "event_name": "Burn",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256",
+            "address"
+        ]
+    },
+    "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+        "contracts": [
+            "ERC20"
+        ],
+        "event_name": "Transfer",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0xde6857219544bb5b7746f48ed30be6386fefc61b2f864cacf559893bf50fd951": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "Deposit",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint16"
+        ]
+    },
+    "0xdec2bacdd2f05b59de34da9b523dff8be42e5e38e818c82fdb0bae774387a724": {
+        "contracts": [
+            "0xc00e94Cb662C3520282E6f5717214004A7f26888"
+        ],
+        "event_name": "DelegateVotesChanged",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xdfb44ffabf0d3a8f650d3ce43eff98f6d050e7ea1a396d5794f014e7dadabacb": {
+        "contracts": [
+            "0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
+        ],
+        "event_name": "LogRegisterProtocol",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0xe117cae46817b894b41a4412b73ae0ba746a5707b94e02d83b4c6502010b11ac": {
+        "contracts": [
+            "0xC1A900Ae76dB21dC5aa8E418Ac0F4E888A4C7431"
+        ],
+        "event_name": "FeeVoteUpdate",
+        "input_types": [
+            "address",
+            "uint256",
+            "bool",
+            "uint256"
+        ]
+    },
+    "0xe19260aff97b920c7df27010903aeb9c8d2be5d310a2c67824cf3f15396e4c16": {
+        "contracts": [
+            "0x514910771AF9Ca656af840dff83E8264EcF986CA"
+        ],
+        "event_name": "Transfer",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "bytes"
+        ]
+    },
+    "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c": {
+        "contracts": [
+            "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+        ],
+        "event_name": "Deposit",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0xe413a321e8681d831f4dbccbca790d2952b56f977908e45be37335533e005286": {
+        "contracts": [
+            "lending_pool_collateral_manager"
+        ],
+        "event_name": "LiquidationCall",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256",
+            "uint256",
+            "address",
+            "bool"
+        ]
+    },
+    "0xe4e8221220a251ab6772c13e04f6c54532602ec260a26f48ff23fa8b11f41be7": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBorrowKink",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0xe5b754fb1abb7f01b499791d0b820ae3b6af3424ac1c59768edb53f4ec31a929": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "Redeem",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xe5d8ea5f9f9bc1e3132e593561d5b440062de5e0d5585a7046c87ca172a60d46": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBorrowPerYearInterestRateSlopeLow",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0xe685c8cdecc6030c45030fd54778812cb84ed8e4467c38294403d68ba7860823": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "MarketIdSet",
+        "input_types": [
+            "string",
+            "string"
+        ]
+    },
+    "0xe945ccee5d701fc83f9b8aa8ca94ea4219ec1fcbd4f4cab4f0ea57c5c3e1d815": {
+        "contracts": [
+            "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B"
+        ],
+        "event_name": "NewPendingImplementation",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xe9a7e5fd4fc8ea18e602350324bf48e8f05d12434af0ce0be05743e6a5fdcb9e": {
+        "contracts": [
+            "lending_pool_configurator"
+        ],
+        "event_name": "BorrowingDisabledOnReserve",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0xe9cf53972264dc95304fd424458745019ddfca0e37ae8f703d74772c41ad115b": {
+        "contracts": [
+            "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+        ],
+        "event_name": "ACLAdminUpdated",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xea28a36ccbf8c2eba827a529927f2e445c651d9a04a393ea79d71ea29c508483": {
+        "contracts": [
+            "0xD15a672319Cf0352560eE76d9e89eAB0889046D3"
+        ],
+        "event_name": "ExcessStETHRecovered",
+        "input_types": [
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xea368a40e9570069bb8e6511d668293ad2e1f03b0d982431fd223de9f3b70ca6": {
+        "contracts": [
+            "lending_pool"
+        ],
+        "event_name": "Swap",
+        "input_types": [
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0xec4431f2ba1a9382f6b0c4352b888cba6f7db91667d9f776abe5ad8ddc5401b6": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "WithdrawReserves",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0xec47838861ac4faa72ef1cf4d982f923880203912cd0c53d6fea2e611562f82c": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "SetBorrowPerYearInterestRateSlopeHigh",
+        "input_types": [
+            "address",
+            "uint64",
+            "uint64"
+        ]
+    },
+    "0xeddf60a41f2e6c1a025372190672a8274d9c1fcb0eacda2aa792493d0af343d7": {
+        "contracts": [
+            "lending_rate_oracle"
+        ],
+        "event_name": "MarketBorrowRateSet",
+        "input_types": [
+            "address",
+            "uint256"
+        ]
+    },
+    "0xedffc32e068c7c95dfd4bdfd5c4d939a084d6b11c4199eac8436ed234d72f926": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "NewMarketInterestRateModel",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xef756634af7ee7210f786ec0f91930afa63fda84d9ff6493ae681c332055dadb": {
+        "contracts": [
+            "0xF95f069F9AD107938F6ba802a3da87892298610E"
+        ],
+        "event_name": "RelayRemoved",
+        "input_types": [
+            "string",
+            "string"
+        ]
+    },
+    "0xef89f27cad105cfe7c63f4a5c70e6b1392b571ff544a83de4bf71ceb46bacfee": {
+        "contracts": [
+            "0x011E52E4E40CF9498c79273329E8827b21E2e581"
+        ],
+        "event_name": "StargateSushiXSwapSrc",
+        "input_types": [
+            "bytes32"
+        ]
+    },
+    "0xf19788e4762738661afead3ca985bcec5f35ffe1d6e31902d413a98a3e91be98": {
+        "contracts": [
+            "0xcFC1fA6b7ca982176529899D99af6473aD80DF4F"
+        ],
+        "event_name": "AddAsset",
+        "input_types": [
+            "address",
+            "tuple"
+        ]
+    },
+    "0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9": {
+        "contracts": [
+            "ERC777"
+        ],
+        "event_name": "AuthorizedOperator",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xf6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b": {
+        "contracts": [
+            "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0"
+        ],
+        "event_name": "RoleRevoked",
+        "input_types": [
+            "bytes32",
+            "address",
+            "address"
+        ]
+    },
+    "0xf891b2a411b0e66a5f0a6ff1368670fefa287a13f541eb633a386a1a9cc7046b": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "BuyCollateral",
+        "input_types": [
+            "address",
+            "address",
+            "uint256",
+            "uint256"
+        ]
+    },
+    "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
+        "contracts": [
+            "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+        ],
+        "event_name": "OwnershipRenounced",
+        "input_types": [
+            "address"
+        ]
+    },
+    "0xf9ffabca9c8276e99321725bcb43fb076a6c66a54b7f21c4e8146d8519b417dc": {
+        "contracts": [
+            "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946"
+        ],
+        "event_name": "NewAdmin",
+        "input_types": [
+            "address",
+            "address"
+        ]
+    },
+    "0xfa56f7b24f17183d81894d3ac2ee654e3c26388d17a28dbd9549b8114304e1f4": {
+        "contracts": [
+            "0x528c57A87706C31765001779168b42f24c694E1b"
+        ],
+        "event_name": "SupplyCollateral",
+        "input_types": [
+            "address",
+            "address",
+            "address",
+            "uint256"
+        ]
+    },
+    "0xff942d249898505febb2a9a00118e27567c084b9497d0aa3ba5e332c235b4f38": {
+        "contracts": [
+            "0x0689640d190b10765f09310fCfE9C670eDe4E25B"
+        ],
+        "event_name": "Withdraw",
+        "input_types": [
+            "uint256",
+            "address",
+            "uint256",
+            "bool"
+        ]
+    }
+}

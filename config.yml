@@ -1,0 +1,16 @@
+rpc: https://ethereum.publicnode.com
+
+paths:
+  ABI: "./ABIs"
+  temp_abi_map: "./event_sign.txt"
+  hex_abi_map: "./event_sign.json"
+  decoded_logs: "./decoded_logs.csv"
+
+filter-events:
+  - Swap
+  - Transfer
+  - Deposite
+  - Withdraw
+  - Borrow
+  - RepayBorrow
+  - Repay

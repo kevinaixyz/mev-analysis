@@ -1,0 +1,7 @@
+__pycache__
+.DS_Store
+keys.ini
+*.txt
+*.log
+sample_block.json
+test.py

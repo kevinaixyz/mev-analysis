@@ -1,8 +1,10 @@
 import yaml
 import logging
 import configparser
+from pathlib import Path
 
-def load_config(file_path):
+
+def load_config():
     """
     Load a YAML configuration file.
 
@@ -12,9 +14,12 @@ def load_config(file_path):
     Returns:
         dict: The loaded configuration as a dictionary.
     """
-    with open(file_path, 'r') as file:
+    abs_path = Path(__file__).parent
+    file_path = abs_path / 'config.yml'
+    with file_path.open('r') as file:
         config = yaml.safe_load(file)
     return config
+
 
 def get_logger():
     logging.basicConfig(
@@ -28,15 +33,21 @@ def get_logger():
     logger = logging.getLogger('app')
     return logger
 
-def get_key(section, option):
+
+def load_keys():
     keys_config = configparser.ConfigParser()
-
+    parent_path = Path(__file__).parent
+    file_path = parent_path / 'keys.ini'
     # Read the configuration from the file
-    keys_config.read('keys.ini')
+    keys_config.read(file_path)
+    return keys_config
 
+
+def get_key(section, option):
     # Access values from the configuration
-    value = keys_config.get(section, option)
-    return value
+    return keys_config.get(section, option)
 
-config = load_config('./config.yml')
+
+config = load_config()
+keys_config = load_keys()
 logger = get_logger()

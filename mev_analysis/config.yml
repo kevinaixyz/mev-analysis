@@ -1,4 +1,9 @@
-rpc: https://ethereum.publicnode.com
+rpc: "https://compatible-omniscient-fog.quiknode.pro/8f73d7a41f012203bc2bd471fc032e9456c4e152/"
+#https://ethereum.publicnode.com
+
+db: 
+  host: "localhost"
+  db_name: mev_analysis
 
 paths:
   ABI: "./ABIs"

@@ -1,9 +1,8 @@
 from web3 import Web3
 import json
 import requests
-from pathlib import Path
-from config import *
-from utils import is_valid_abi, is_json
+from mev_analysis.config import *
+from mev_analysis.utils import is_valid_abi, is_json
 
 w3 = Web3(Web3.HTTPProvider('https://ethereum.publicnode.com'))
 

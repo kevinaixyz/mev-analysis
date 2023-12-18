@@ -1,6 +1,6 @@
 import json
-from utils import is_json
-from config import *
+from mev_analysis.utils import is_json
+from mev_analysis.config import *
 import requests
 from pathlib import Path
 

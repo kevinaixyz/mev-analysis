@@ -2,7 +2,7 @@ from web3 import Web3
 import json
 from pathlib import Path
 import requests
-from config import config, logger
+from mev_analysis.config import config, logger
 import abiutils
 
 w3 = Web3(Web3.HTTPProvider('https://ethereum.publicnode.com'))

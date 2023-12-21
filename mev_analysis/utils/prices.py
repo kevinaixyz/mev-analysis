@@ -3,7 +3,7 @@ from typing import List
 
 from pycoingecko import CoinGeckoAPI
 
-from models.prices import COINGECKO_ID_BY_ADDRESS, TOKEN_ADDRESSES, Price
+from mev_analysis.schemas.prices import COINGECKO_ID_BY_ADDRESS, TOKEN_ADDRESSES, Price
 
 
 def fetch_prices() -> List[Price]:

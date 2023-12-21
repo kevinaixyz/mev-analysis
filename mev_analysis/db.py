@@ -1,5 +1,6 @@
 import os
 from typing import Any, Iterable, List, Optional
+from urllib.parse import quote_plus
 
 from sqlalchemy import create_engine, orm
 from sqlalchemy.orm import sessionmaker
@@ -8,12 +9,14 @@ from mev_analysis.utils.text_io import StringIteratorIO
 from mev_analysis.config import config, get_key
 
 def get_trace_database_uri() -> Optional[str]:
-    username = os.getenv("TRACE_DB_USER")
-    password = os.getenv("TRACE_DB_PASSWORD")
-    host = os.getenv("TRACE_DB_HOST")
-    db_name = "trace_db"
+    username = get_key('DB', 'USERNAME')
+    password = get_key('DB', 'PASSWORD')
+    password = quote_plus(password)
+    password = password.replace('%', '%%')
+    host = config['db']['host']
+    db_name = config['db']['trace_db']
 
-    if all(field is not None for field in [username, password, host]):
+    if all(field is not None for field in [username, password, host, db_name]):
         return f"postgresql+psycopg2://{username}:{password}@{host}/{db_name}"
 
     return None
@@ -22,8 +25,10 @@ def get_trace_database_uri() -> Optional[str]:
 def get_inspect_database_uri():
     username = get_key('DB', 'USERNAME')
     password = get_key('DB', 'PASSWORD')
+    password = quote_plus(password)
+    password = password.replace('%', '%%')
     host = config['db']['host']
-    db_name = config['db']['db_name']
+    db_name = config['db']['analysis_db']
     return f"postgresql+psycopg2://{username}:{password}@{host}/{db_name}"
 
 

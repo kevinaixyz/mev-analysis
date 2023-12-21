@@ -56,13 +56,13 @@ def write_sandwiches(
 
     if len(sandwich_models) > 0:
         db_session.bulk_save_objects(sandwich_models)
-        db_session.execute(
+        db_session.execute(text(
             """
             INSERT INTO sandwiched_swaps
             (sandwich_id, block_number, transaction_hash, trace_address)
             VALUES
             (:sandwich_id, :block_number, :transaction_hash, :trace_address)
-            """,
+            """),
             params=sandwiched_swaps,
         )
 

@@ -46,7 +46,7 @@ class TraceClassifier:
                 return classified_trace
 
         return ClassifiedTrace(
-            **trace.dict(),
+            **trace.model_dump(),
             trace_type=trace.type,
             classification=Classification.unknown,
         )

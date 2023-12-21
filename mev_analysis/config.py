@@ -4,7 +4,7 @@ import configparser
 from pathlib import Path
 
 
-def load_config():
+def load_config() -> dict:
     """
     Load a YAML configuration file.
 
@@ -50,4 +50,4 @@ def get_key(section, option):
 
 config = load_config()
 keys_config = load_keys()
-logger = get_logger()
+# logger = get_logger()

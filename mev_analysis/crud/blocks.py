@@ -4,19 +4,21 @@ from typing import List
 from mev_analysis.db import write_as_csv
 from mev_analysis.schemas.blocks import Block
 
+from sqlalchemy import text
+
 
 def delete_blocks(
     db_session,
     after_block_number: int,
     before_block_number: int,
 ) -> None:
-    db_session.execute(
+    db_session.execute(text(
         """
         DELETE FROM blocks
         WHERE
             block_number >= :after_block_number AND
             block_number < :before_block_number
-        """,
+        """),
         params={
             "after_block_number": after_block_number,
             "before_block_number": before_block_number,

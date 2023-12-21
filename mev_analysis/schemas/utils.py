@@ -16,7 +16,12 @@ def to_original_json_dict(model: BaseModel) -> dict:
 
 
 def hexbytes_to_str(v: HexBytes) -> str:
-        return v.hex() if isinstance(v, HexBytes) else v
+    return v.hex() if isinstance(v, HexBytes) else v
+
+
+def bytes_to_str(v: bytes) -> str:
+    return v.hex() if isinstance(v, bytes) else v
+
 
 class Web3Model(BaseModel):
     """BaseModel that handles web3's unserializable objects"""

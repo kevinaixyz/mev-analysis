@@ -39,6 +39,9 @@ class StringIteratorIO(io.TextIOBase):
                 line.append(m)
         return "".join(line)
 
+    def readline(self, n: Optional[int] = None) -> str:
+        return self.read(n)
+
 
 class BytesIteratorIO(io.BufferedIOBase):
     def __init__(self, iter: Iterator[bytes]):

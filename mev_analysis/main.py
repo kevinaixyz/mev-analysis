@@ -1,8 +1,16 @@
 import asyncio
 
-from config import config, get_key
+from config import get_key
 from mev_analysis.db import get_inspect_session, get_trace_session
 from mev_analysis.mevanalysis import MEVAnalysis
+from mev_analysis.utils.prices import fetch_prices, fetch_prices_range
+from mev_analysis.crud.prices import write_prices
+
+import logging
+import sys
+
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 async def fetch_block_command(block_number: int, rpc: str):
@@ -15,7 +23,8 @@ async def fetch_block_command(block_number: int, rpc: str):
     )
     print(block.json())
 
-async def inspect_block_command(block_number:int, rpc:str):
+
+async def inspect_block_command(block_number: int, rpc: str):
     inspect_db_session = get_inspect_session()
     trace_db_session = get_trace_session()
 
@@ -27,12 +36,13 @@ async def inspect_block_command(block_number:int, rpc:str):
         block=block_number,
     )
 
+
 async def inspect_many_blocks_command(
-    after_block: int,
-    before_block: int,
-    rpc: str,
-    max_concurrency: int,
-    request_timeout: int,
+        after_block: int,
+        before_block: int,
+        rpc: str,
+        max_concurrency: int,
+        request_timeout: int,
 ):
     inspect_db_session = get_inspect_session()
     trace_db_session = get_trace_session()
@@ -48,6 +58,21 @@ async def inspect_many_blocks_command(
         after_block=after_block,
         before_block=before_block,
     )
+
+
+def fetch_all_prices():
+    inspect_db_session = get_inspect_session()
+
+    logger.info("Fetching prices")
+    prices = fetch_prices()
+
+    logger.info("Writing prices")
+    write_prices(inspect_db_session, prices)
+
+
+def init():
+    fetch_all_prices()
+
 
 if __name__ == '__main__':
     rpc = get_key('Node', 'RPC_URL')

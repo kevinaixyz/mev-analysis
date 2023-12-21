@@ -1,6 +1,7 @@
 from typing import List
 from uuid import uuid4
 
+from sqlalchemy import text
 from mev_analysis.models.arbitrages import ArbitrageModel
 from mev_analysis.schemas.arbitrages import Arbitrage
 
@@ -56,13 +57,13 @@ def write_arbitrages(
 
     if len(arbitrage_models) > 0:
         db_session.bulk_save_objects(arbitrage_models)
-        db_session.execute(
+        db_session.execute(text(
             """
             INSERT INTO arbitrage_swaps
             (arbitrage_id, swap_transaction_hash, swap_trace_address)
             VALUES
             (:arbitrage_id, :swap_transaction_hash, :swap_trace_address)
-            """,
+            """),
             params=swap_arbitrage_ids,
         )
 

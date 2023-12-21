@@ -1,3 +1,5 @@
+from sqlalchemy import text
+
 INSERT_ARBITRAGE_SUMMARY_QUERY = """
 INSERT INTO mev_summary (
     SELECT
@@ -163,13 +165,13 @@ def _delete_summary_for_block_range(
     after_block_number: int,
     before_block_number: int,
 ) -> None:
-    db_session.execute(
+    db_session.execute(text(
         """
         DELETE FROM mev_summary
         WHERE
             block_number >= :after_block_number AND
             block_number < :before_block_number
-        """,
+        """),
         params={
             "after_block_number": after_block_number,
             "before_block_number": before_block_number,
@@ -184,16 +186,16 @@ def _insert_into_summary_for_block_range(
     after_block_number: int,
     before_block_number: int,
 ) -> None:
-    db_session.execute(
-        INSERT_ARBITRAGE_SUMMARY_QUERY,
+    db_session.execute(text(
+        INSERT_ARBITRAGE_SUMMARY_QUERY),
         params={
             "after_block_number": after_block_number,
             "before_block_number": before_block_number,
         },
     )
 
-    db_session.execute(
-        INSERT_LIQUIDATIONS_SUMMARY_QUERY,
+    db_session.execute(text(
+        INSERT_LIQUIDATIONS_SUMMARY_QUERY),
         params={
             "after_block_number": after_block_number,
             "before_block_number": before_block_number,

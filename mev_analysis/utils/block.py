@@ -3,7 +3,7 @@ import logging
 from typing import List, Optional
 from pydantic import ValidationError
 
-from sqlalchemy import orm
+from sqlalchemy import orm, text
 from web3 import Web3
 
 from mev_analysis.utils.fees import fetch_base_fee_per_gas
@@ -128,7 +128,7 @@ def _find_block_timestamp(
     block_number: int,
 ) -> Optional[int]:
     result = trace_db_session.execute(
-        "SELECT block_timestamp FROM block_timestamps WHERE block_number = :block_number",
+        text("SELECT block_timestamp FROM block_timestamps WHERE block_number = :block_number"),
         params={"block_number": block_number},
     ).one_or_none()
 
@@ -144,7 +144,7 @@ def _find_block_traces(
     block_number: int,
 ) -> Optional[List[Trace]]:
     result = trace_db_session.execute(
-        "SELECT raw_traces FROM block_traces WHERE block_number = :block_number",
+        text("SELECT raw_traces FROM block_traces WHERE block_number = :block_number"),
         params={"block_number": block_number},
     ).one_or_none()
 
@@ -160,7 +160,7 @@ def _find_block_receipts(
     block_number: int,
 ) -> Optional[List[Receipt]]:
     result = trace_db_session.execute(
-        "SELECT raw_receipts FROM block_receipts WHERE block_number = :block_number",
+        text("SELECT raw_receipts FROM block_receipts WHERE block_number = :block_number"),
         params={"block_number": block_number},
     ).one_or_none()
 
@@ -176,7 +176,7 @@ def _find_base_fee_per_gas(
     block_number: int,
 ) -> Optional[int]:
     result = trace_db_session.execute(
-        "SELECT base_fee_in_wei FROM base_fee WHERE block_number = :block_number",
+        text("SELECT base_fee_in_wei FROM base_fee WHERE block_number = :block_number"),
         params={"block_number": block_number},
     ).one_or_none()
 

@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Any, Dict, List, Optional
 
-from .utils import CamelModel, hexbytes_to_str
+from .utils import CamelModel, hexbytes_to_str, bytes_to_str
 from pydantic import ConfigDict, field_validator
 from hexbytes import HexBytes
 
@@ -61,25 +61,33 @@ class Protocol(Enum):
 
 class ClassifiedTrace(Trace):
     classification: Classification
-    to_address: Optional[str]
-    from_address: Optional[str]
-    gas: Optional[int]
-    value: Optional[int]
-    gas_used: Optional[int]
+    to_address: Optional[str] = None
+    from_address: Optional[str] = None
+    gas: Optional[int] = None
+    value: Optional[int] = None
+    gas_used: Optional[int] = None
     transaction_hash: str
     transaction_position: int
-    protocol: Optional[Protocol]
-    function_name: Optional[str]
-    function_signature: Optional[str]
-    inputs: Optional[Dict[str, Any]]
-    abi_name: Optional[str]
+    protocol: Optional[Protocol] = None
+    function_name: Optional[str] = None
+    function_signature: Optional[str] = None
+    inputs: Optional[Dict[str, Any]] = None
+    abi_name: Optional[str] = None
+
     # TODO[pydantic]: The following keys were removed: `json_encoders`.
     # Check https://docs.pydantic.dev/dev-v2/migration/#changes-to-config for more information.
-    model_config = ConfigDict(validate_assignment=True, json_encoders={
-        # a little lazy but fine for now
-        # this is used for bytes value inputs
-        bytes: lambda b: b.hex(),
-    })
+    # model_config = ConfigDict(validate_assignment=True, json_encoders={
+    #     # a little lazy but fine for now
+    #     # this is used for bytes value inputs
+    #     bytes: lambda b: b.hex(),
+    # })
+
+    @field_validator("inputs", mode="before")
+    @classmethod
+    def bytes_to_str(cls, v: Dict[str, Any]) -> str:
+        for (k, val) in v.items():
+            v[k] = bytes_to_str(val)
+        return v
 
 
 class CallTrace(ClassifiedTrace):

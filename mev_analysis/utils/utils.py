@@ -13,12 +13,15 @@ def equal_within_percent(
         (first_value - second_value) / (0.5 * (first_value + second_value))
     )
     return difference < threshold_percent
+
+
 def is_json(data):
     try:
         json_object = json.loads(data)
         return True
     except (json.JSONDecodeError, TypeError):
         return False
+
 
 def is_valid_abi(obj):
     return True if isinstance(obj, list) else False

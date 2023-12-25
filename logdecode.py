@@ -47,7 +47,7 @@ class LogDecoder:
                 }
 
                 # Decode the log
-                decoded_log = w3.codec.decode_log(event_abi, log['data'], log['topics'])
+                decoded_log = w3.codec.decode_log(event_abi, log['tracedata'], log['topics'])
 
                 # Print the decoded log
                 print(decoded_log)
@@ -73,4 +73,4 @@ print(log)
 # logs = contract.logs.getFunctionImplementation().processReceipt(receipt)
 
 # for log in logs:
-#     print(log.args)  # This will print readable text (arguments of the event) from the log data
+#     print(log.args)  # This will print readable text (arguments of the event) from the log tracedata

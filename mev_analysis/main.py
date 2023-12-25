@@ -6,8 +6,11 @@ from mev_analysis.mevanalysis import MEVAnalysis
 from mev_analysis.utils.prices import fetch_prices, fetch_prices_range
 from mev_analysis.crud.prices import write_prices
 
+from mev_analysis.tracedata.etl import load_flashbot_blocks
+
 import logging
 import sys
+
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -76,4 +79,6 @@ def init():
 
 if __name__ == '__main__':
     rpc = get_key('Node', 'RPC_URL')
-    task = asyncio.run(inspect_block_command(18541697, rpc))
+    block_numbers = load_flashbot_blocks()
+    for block_number in block_numbers[: 10]:
+        task = asyncio.run(inspect_block_command(block_number, rpc))

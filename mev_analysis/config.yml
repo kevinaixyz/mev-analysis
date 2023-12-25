@@ -1,7 +1,9 @@
 db:
   host: "localhost"
   analysis_db: mev_analysis
-  trace_db:
+  trace_db: trace_db
+
+chain: Ethereum
 
 paths:
   ABI: "./ABIs"

@@ -9,9 +9,9 @@ from web3 import Web3, AsyncHTTPProvider
 from web3.eth import AsyncEth
 
 from mev_analysis.utils.block import create_from_block_number
-from classifiers.trace import TraceClassifier
-from inspectors.blockinspector import inspect_block, inspect_many_blocks
-from methods import get_block_receipts, trace_block
+from mev_analysis.classifiers.trace import TraceClassifier
+from mev_analysis.inspectors.blockinspector import inspect_block, inspect_many_blocks
+from mev_analysis.methods import get_block_receipts, trace_block
 
 logger = logging.getLogger(__name__)
 

@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Any, Dict, List, Optional
 
-from .utils import CamelModel, hexbytes_to_str, bytes_to_str
+from .utils import CamelModel, hexbytes_to_str
 from pydantic import ConfigDict, field_validator
 from hexbytes import HexBytes
 
@@ -48,15 +48,23 @@ class Protocol(Enum):
     uniswap_v3 = "uniswap_v3"
     sushiswap = "sushiswap"
     aave = "aave"
+    aave_v3 = "aave_v3"
     weth = "weth"
     curve = "curve"
     zero_ex = "0x"
     balancer_v1 = "balancer_v1"
+    balancer_v2 = "balancer_v2"
     compound_v2 = "compound_v2"
     cream = "cream"
     cryptopunks = "cryptopunks"
     bancor = "bancor"
     opensea = "opensea"
+    traderjoe = "traderjoe"
+    benqi = "benqi"
+    gmx = 'gmx'
+    pangolin = "pangolin"
+    compound_v3 = "compound_v3"
+    radiant_v2 = "radiant_v2"
 
 
 class ClassifiedTrace(Trace):
@@ -86,7 +94,9 @@ class ClassifiedTrace(Trace):
     @classmethod
     def bytes_to_str(cls, v: Dict[str, Any]) -> str:
         for (k, val) in v.items():
-            v[k] = bytes_to_str(val)
+            # if k == 'makerSignature' or k=="takerSignature":
+            #     v[k] = hexbytes_to_str(val)
+            v[k] = hexbytes_to_str(val)
         return v
 
 

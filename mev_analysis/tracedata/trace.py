@@ -1,9 +1,9 @@
-from sqlalchemy import ARRAY, JSON, Column, Integer, Numeric, String
+from sqlalchemy import JSON, Column, Numeric
 
 from mev_analysis.models.base import Base
 
 
-class TraceModel(Base):
+class BlockTraceModel(Base):
     __tablename__ = "block_traces"
 
     block_number = Column(Numeric, primary_key=True)

@@ -80,7 +80,6 @@ def write_as_csv(
     csv_iterator = StringIteratorIO(
         ("|".join(map(_clean_csv_value, item)) + "\n" for item in items)
     )
-
     with db_session.connection().connection.cursor() as cursor:
         cursor.copy_from(csv_iterator, table_name, sep="|")
 

@@ -40,7 +40,7 @@ def write_classified_traces(
             trace.abi_name,
             trace.function_name,
             trace.function_signature,
-            _inputs_as_json(trace),
+            inputs_as_json(trace),
             trace.from_address,
             trace.to_address,
             trace.gas,
@@ -56,7 +56,7 @@ def write_classified_traces(
     write_as_csv(db_session, "classified_traces", items)
 
 
-def _inputs_as_json(trace) -> str:
+def inputs_as_json(trace) -> str:
     inputs = json.dumps(json.loads(trace.json(include={"inputs"}))["inputs"])
     inputs_with_array = f"[{inputs}]"
     return inputs_with_array

@@ -5,17 +5,20 @@ from typing import List
 from datetime import datetime, date
 import logging
 
-bundle_path = './flashbot/'
-parsed_block_path = './flashbot/blocks/'
-parsed_tx_path = './flashbot/transactions/'
-logger = logger = logging.getLogger(__file__.name)
+bundle_path = '/Users/kevin/PolyU-COMP-MScIT/5933-Project/datasets/flashbot'
+parsed_block_path = f'{bundle_path}/blocks/'
+parsed_tx_path = f'{bundle_path}/transactions/'
+logger = logger = logging.getLogger(__file__)
 
 
-def read_parse_flashbot(parse_block: bool, parse_tx: bool, filename: str = None):
+def read_parse_flashbot(filename: str = None):
     files = Path(bundle_path).glob('*.json')
     file_index = 0
     total_blocks = 0
     total_tx = 0
+    blocks_file = Path(parsed_block_path) / 'blocks.csv'
+    if not blocks_file.exists():
+        blocks_file.touch()
 
     for i, file in enumerate(files):
         if (filename is not None):
@@ -27,46 +30,22 @@ def read_parse_flashbot(parse_block: bool, parse_tx: bool, filename: str = None)
         if i >= file_index:
             with open(file, 'r', encoding='utf8') as json_file:
                 data = json.load(json_file)
-                no_blocks, no_tx = parse_data(data, parse_tx)
-                total_blocks += no_blocks
-                total_tx += no_tx
-                logger.info(f'File {file.name} is parsed.')
-                logger.info(f'Total blocks: {total_blocks}')
-                logger.info(f'Total tx: {total_tx}')
-
-def parse_data(data: dict, handle_tx: bool):
-    
-    no_blocks, no_tx = parse_block(data, handle_tx)
-    return no_blocks, no_tx
+                no_blocks = parse_block(data, blocks_file)
+                print(f'Total number of blocks: {no_blocks}')
      
 
-def parse_block(data: dict, handle_tx: bool):
+def parse_block(data: dict, block_file: Path):
     blocks = data['blocks']
-    counter = 10000
+    counter = 0
     block_list = []
     tx_list = []
-    for b in blocks:
-        block = {
-            'block_no': b['block_number'], 
-            'miner_reward': b['miner_reward'], 
-            'fee_recipient_eth_diff': b['fee_recipient_eth_diff'], 
-            'miner': b['miner'], 
-            'fee_recipient': b['fee_recipient'], 
-            'coinbase_transfers': b['coinbase_transfers'],
-            'eth_sent_to_fee_recipient': b['eth_sent_to_fee_recipient'], 
-            'gas_used': b['gas_used'],
-            'gas_price': b['gas_price'],
-            'effective_priority_fee': b['effective_priority_fee']
-        }
-        block_list.append(block)
 
-        if handle_tx:
-            tx_list += parse_tx(b)
-
-    save_blocks(block_list)
-    save_tx(tx_list)
-
-    return len(block_list), len(tx_list)
+    with block_file.open('a', encoding='utf-8') as file:
+        for b in blocks:
+            line = '{},{},{}\n'.format(b['block_number'], b['gas_used'], b['gas_price'])
+            file.write(line)
+            counter+=1
+    return counter
 
 def parse_tx(block: dict):
     tx_list = []
@@ -103,7 +82,7 @@ def save_tx(tx_list: List[dict]):
     tx_df.to_csv(f'{parsed_tx_path}{ts}_tx.csv', index=False)
 
 def main():
-    read_parse_flashbot(True, True)
+    read_parse_flashbot()
 
 
 if __name__ == '__main__': 

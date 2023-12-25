@@ -1,4 +1,5 @@
 import json
+from typing import Dict, Any
 
 from hexbytes import HexBytes
 from pydantic import ConfigDict, BaseModel
@@ -16,11 +17,34 @@ def to_original_json_dict(model: BaseModel) -> dict:
 
 
 def hexbytes_to_str(v: HexBytes) -> str:
-    return v.hex() if isinstance(v, HexBytes) else v
+    if isinstance(v, HexBytes) or isinstance(v, bytes):
+        return v.hex()
+    elif isinstance(v, dict):
+        return hexbytes_to_str_in_dict(v)
+    elif isinstance(v, list) or isinstance(v, tuple):
+        return hexbytes_to_str_in_iter(v)
+    else:
+        return v
 
 
-def bytes_to_str(v: bytes) -> str:
-    return v.hex() if isinstance(v, bytes) else v
+def hexbytes_to_str_in_dict(v: Dict[str, Any]) -> None:
+    for key, value in v.items():
+        if isinstance(value, HexBytes):
+            v[key] = value.hex()
+        if isinstance(value, dict):
+            hexbytes_to_str_in_dict(value)
+
+
+def hexbytes_to_str_in_iter(v: list | tuple) -> list | tuple:
+    if isinstance(v, list):
+        for i, value in enumerate(v):
+            v[i] = hexbytes_to_str(value)
+        return v
+    if isinstance(v, tuple):
+        new_list = []
+        for value in v:
+            new_list.append(hexbytes_to_str(value))
+        return tuple(new_list)
 
 
 class Web3Model(BaseModel):

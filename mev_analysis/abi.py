@@ -6,9 +6,10 @@ from pydantic import parse_obj_as
 
 from mev_analysis.schemas.abi import ABI
 from mev_analysis.schemas.traces import Protocol
+from mev_analysis.config import config
 
 THIS_FILE_DIRECTORY = Path(__file__).parents[0]
-ABI_DIRECTORY_PATH = THIS_FILE_DIRECTORY / "abis"
+ABI_DIRECTORY_PATH = THIS_FILE_DIRECTORY / "abis" / config['chain']
 
 
 def get_abi_path(abi_name: str, protocol: Optional[Protocol]) -> Optional[Path]:

@@ -2,6 +2,8 @@ import asyncio
 import logging
 from typing import List, Optional
 from pydantic import ValidationError
+import json
+from pathlib import Path
 
 from sqlalchemy import orm, text
 from web3 import Web3
@@ -11,6 +13,8 @@ from mev_analysis.schemas.blocks import Block
 from mev_analysis.schemas.receipts import Receipt
 from mev_analysis.schemas.traces import Trace, TraceType
 from mev_analysis.utils.utils import hex_to_int
+from mev_analysis.config import config
+from mev_analysis.rpc_endpoints import AvalancheRpcEndpoint
 
 logger = logging.getLogger(__name__)
 
@@ -112,6 +116,10 @@ async def _fetch_block_receipts(w3, block_number: int) -> List[Receipt]:
 
 async def _fetch_block_traces(w3, block_number: int) -> List[Trace]:
     traces_json = await w3.eth.trace_block(block_number)
+    # Todo
+    # if config['chain'] == 'Avalanche':
+    #     traces_json = await w3.provider.make_request(AvalancheRpcEndpoint.trace_block.value, [hex(block_number), {'tracer': 'callTracer'}])
+
     traces = []
 
     for trace_json in traces_json:

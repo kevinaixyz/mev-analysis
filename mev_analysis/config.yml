@@ -6,7 +6,7 @@ db:
 chain: Ethereum
 
 paths:
-  ABI: "./ABIs"
+  ABI: "mev_analysis/abis"
   temp_abi_map: "./event_sign.txt"
   hex_abi_map: "./event_sign.json"
   decoded_logs: "./decoded_logs.csv"

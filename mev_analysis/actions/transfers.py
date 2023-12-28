@@ -25,7 +25,7 @@ def get_eth_transfers(traces: List[ClassifiedTrace]) -> List[Transfer]:
     return [
         transfer
         for transfer in transfers
-        if transfer.token_address == ETH_TOKEN_ADDRESS
+        if transfer.token_address.lower() == ETH_TOKEN_ADDRESS.lower()
     ]
 
 
@@ -54,9 +54,9 @@ def build_eth_transfer(trace: ClassifiedTrace) -> Transfer:
         transaction_hash=trace.transaction_hash,
         trace_address=trace.trace_address,
         amount=trace.value,
-        to_address=trace.to_address,
-        from_address=trace.from_address,
-        token_address=ETH_TOKEN_ADDRESS,
+        to_address=trace.to_address.lower(),
+        from_address=trace.from_address.lower(),
+        token_address=ETH_TOKEN_ADDRESS.lower(),
     )
 
 
@@ -91,10 +91,10 @@ def filter_transfers(
     filtered_transfers = []
 
     for transfer in transfers:
-        if to_address is not None and transfer.to_address != to_address:
+        if to_address is not None and transfer.to_address.lower() != to_address.lower():
             continue
 
-        if from_address is not None and transfer.from_address != from_address:
+        if from_address is not None and transfer.from_address.lower() != from_address.lower():
             continue
 
         filtered_transfers.append(transfer)

@@ -32,13 +32,13 @@ def _get_sandwich_starting_with_swap(
     front_swap: Swap,
     rest_swaps: List[Swap],
 ) -> Optional[Sandwich]:
-    sandwicher_address = front_swap.to_address
+    sandwicher_address = front_swap.to_address.lower()
     sandwiched_swaps = []
 
     if sandwicher_address in [
-        UNISWAP_V2_ROUTER,
-        UNISWAP_V3_ROUTER,
-        UNISWAP_V3_ROUTER_2,
+        UNISWAP_V2_ROUTER.lower(),
+        UNISWAP_V3_ROUTER.lower(),
+        UNISWAP_V3_ROUTER_2.lower(),
     ]:
         return None
 
@@ -46,26 +46,26 @@ def _get_sandwich_starting_with_swap(
         if other_swap.transaction_hash == front_swap.transaction_hash:
             continue
 
-        if other_swap.contract_address == front_swap.contract_address:
+        if other_swap.contract_address.lower() == front_swap.contract_address.lower():
             if (
-                other_swap.token_in_address == front_swap.token_in_address
-                and other_swap.token_out_address == front_swap.token_out_address
-                and other_swap.from_address != sandwicher_address
+                other_swap.token_in_address.lower() == front_swap.token_in_address.lower()
+                and other_swap.token_out_address.lower() == front_swap.token_out_address.lower()
+                and other_swap.from_address.lower() != sandwicher_address.lower()
             ):
                 sandwiched_swaps.append(other_swap)
             elif (
-                other_swap.token_out_address == front_swap.token_in_address
-                and other_swap.token_in_address == front_swap.token_out_address
-                and other_swap.from_address == sandwicher_address
+                other_swap.token_out_address.lower() == front_swap.token_in_address.lower()
+                and other_swap.token_in_address.lower() == front_swap.token_out_address.lower()
+                and other_swap.from_address.lower() == sandwicher_address.lower()
             ):
                 if len(sandwiched_swaps) > 0:
                     return Sandwich(
                         block_number=front_swap.block_number,
-                        sandwicher_address=sandwicher_address,
+                        sandwicher_address=sandwicher_address.lower(),
                         frontrun_swap=front_swap,
                         backrun_swap=other_swap,
                         sandwiched_swaps=sandwiched_swaps,
-                        profit_token_address=front_swap.token_in_address,
+                        profit_token_address=front_swap.token_in_address.lower(),
                         profit_amount=other_swap.token_out_amount
                         - front_swap.token_in_amount,
                     )

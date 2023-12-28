@@ -4,9 +4,12 @@ import eth_utils.abi
 from eth_abi import decode
 from eth_abi.exceptions import InsufficientDataBytes, NonEmptyPaddingBytes
 from hexbytes._utils import hexstr_to_bytes
+from sqlalchemy import orm, select
 
+from mev_analysis.models.function_signatures import FunctionSignaturesModel
 from mev_analysis.schemas.abi import ABI, ABIFunctionDescription
 from mev_analysis.schemas.call_data import CallData
+from mev_analysis.schemas.traces import Classification
 
 # 0x + 8 characters
 SELECTOR_LENGTH = 10
@@ -46,3 +49,22 @@ class ABIDecoder:
             function_signature=func.get_signature(),
             inputs={name: value for name, value in zip(names, decoded)},
         )
+
+    @classmethod
+    def generalised_decode(cls, data: str, db_session: orm.session) -> Optional[CallData]:
+        selector = data[:SELECTOR_LENGTH]
+        function_signature = (db_session
+                  .execute(select(FunctionSignaturesModel)
+                           .filter_by(bytes_signature=selector))
+                ).scalar_one_or_none()
+        # if len(function_signatures) > 1:
+        #     for fs in function_signatures:
+        #         for type in Classification:
+        #             if fs['function_name'].lower().index(type.value) >= 0:
+        #                 function_signature = fs
+        if function_signature is not None:
+            return CallData(
+                function_name=function_signature.function_name,
+                function_signature=function_signature.function_signature,
+            )
+        return None

@@ -2,11 +2,11 @@ from web3 import Web3
 import json
 from pathlib import Path
 import requests
-from mev_analysis.config import config, logger
-import abiutils
+from mev_analysis.config import config
+from mev_analysis.abis import abiutils
 
 w3 = Web3(Web3.HTTPProvider('https://ethereum.publicnode.com'))
-all_abis = abiutils.load_abis()
+all_abis = abiutils.load_abis_from_file()
 abi_sign_map = abiutils.load_abi_sign_map()
 
 def test():

@@ -25,10 +25,10 @@ class CreamLiquidationClassifier(LiquidationClassifier):
         child_traces: List[ClassifiedTrace],
     ) -> Optional[Liquidation]:
 
-        liquidator = liquidation_trace.from_address
+        liquidator = liquidation_trace.from_address.lower()
         liquidated = liquidation_trace.inputs["borrower"]
 
-        debt_token_address = liquidation_trace.to_address
+        debt_token_address = liquidation_trace.to_address.lower()
         received_token_address = liquidation_trace.inputs["cTokenCollateral"]
 
         debt_purchase_amount = None
@@ -36,7 +36,7 @@ class CreamLiquidationClassifier(LiquidationClassifier):
 
         debt_purchase_amount, debt_token_address = (
             (liquidation_trace.value, ETH_TOKEN_ADDRESS)
-            if debt_token_address == CRETH_TOKEN_ADDRESS
+            if debt_token_address.lower() == CRETH_TOKEN_ADDRESS
             and liquidation_trace.value != 0
             else (liquidation_trace.inputs["repayAmount"], CRETH_TOKEN_ADDRESS)
         )
@@ -48,11 +48,11 @@ class CreamLiquidationClassifier(LiquidationClassifier):
         seize_trace = _get_seize_call(child_traces)
 
         if debt_transfer is not None:
-            debt_token_address = debt_transfer.token_address
+            debt_token_address = debt_transfer.token_address.lower()
             debt_purchase_amount = debt_transfer.amount
 
         if received_transfer is not None:
-            received_token_address = received_transfer.token_address
+            received_token_address = received_transfer.token_address.lower()
             received_amount = received_transfer.amount
 
         elif seize_trace is not None and seize_trace.inputs is not None:

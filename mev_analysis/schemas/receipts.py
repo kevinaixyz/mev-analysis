@@ -28,3 +28,8 @@ class Receipt(CamelModel):
         if isinstance(v, str):
             return hex_to_int(v)
         return v
+
+    @field_validator("to", mode="before")
+    @classmethod
+    def lowercase_address(cls, v: str) -> str:
+        return v.lower() if v is not None else v

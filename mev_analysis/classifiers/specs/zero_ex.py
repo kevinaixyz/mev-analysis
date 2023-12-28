@@ -237,13 +237,13 @@ def _get_taker_token_transfer_amount(
             f"A settled order should consist of 2 child transfers, not {len(child_transfers)}."
         )
 
-    if taker_address == ANY_TAKER_ADDRESS:
+    if taker_address.lower() == ANY_TAKER_ADDRESS:
         for transfer in child_transfers:
-            if transfer.token_address == token_address:
+            if transfer.token_address.lower() == token_address.lower():
                 return transfer.amount
     else:
         for transfer in child_transfers:
-            if transfer.to_address == taker_address:
+            if transfer.to_address.lower() == taker_address.lower():
                 return transfer.amount
 
     raise RuntimeError("Unable to find transfers matching 0x order.")

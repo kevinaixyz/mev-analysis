@@ -70,8 +70,8 @@ def _get_arbitrages_from_swaps(swaps: List[Swap]) -> List[Arbitrage]:
                 swaps=route,
                 block_number=route[0].block_number,
                 transaction_hash=route[0].transaction_hash,
-                account_address=route[0].from_address,
-                profit_token_address=route[0].token_in_address,
+                account_address=route[0].from_address.lower(),
+                profit_token_address=route[0].token_in_address.lower(),
                 start_amount=start_amount,
                 end_amount=end_amount,
                 profit_amount=profit_amount,
@@ -152,7 +152,7 @@ def _get_all_start_end_swaps(swaps: List[Swap]) -> List[Tuple[Swap, List[Swap]]]
     - not swap[start].from_address in all_pool_addresses
     - not swap[end].to_address in all_pool_addresses
     """
-    pool_addrs = [swap.contract_address for swap in swaps]
+    pool_addrs = [swap.contract_address.lower() for swap in swaps]
     valid_start_ends: List[Tuple[Swap, List[Swap]]] = []
 
     for index, potential_start_swap in enumerate(swaps):
@@ -161,12 +161,12 @@ def _get_all_start_end_swaps(swaps: List[Swap]) -> List[Tuple[Swap, List[Swap]]]
 
         for potential_end_swap in remaining_swaps:
             if (
-                potential_start_swap.token_in_address
-                == potential_end_swap.token_out_address
-                and potential_start_swap.contract_address
-                != potential_end_swap.contract_address
-                and potential_start_swap.from_address == potential_end_swap.to_address
-                and not potential_start_swap.from_address in pool_addrs
+                potential_start_swap.token_in_address.lower()
+                == potential_end_swap.token_out_address.lower()
+                and potential_start_swap.contract_address.lower()
+                != potential_end_swap.contract_address.lower()
+                and potential_start_swap.from_address.lower() == potential_end_swap.to_address.lower()
+                and not potential_start_swap.from_address.lower() in pool_addrs
             ):
 
                 ends_for_start.append(potential_end_swap)
@@ -179,11 +179,11 @@ def _get_all_start_end_swaps(swaps: List[Swap]) -> List[Tuple[Swap, List[Swap]]]
 
 def _swap_outs_match_swap_ins(swap_out, swap_in) -> bool:
     return (
-        swap_out.token_out_address == swap_in.token_in_address
+        swap_out.token_out_address.lower() == swap_in.token_in_address.lower()
         and (
-            swap_out.contract_address == swap_in.from_address
-            or swap_out.to_address == swap_in.contract_address
-            or swap_out.to_address == swap_in.from_address
+            swap_out.contract_address.lower() == swap_in.from_address.lower()
+            or swap_out.to_address.lower() == swap_in.contract_address.lower()
+            or swap_out.to_address.lower() == swap_in.from_address.lower()
         )
         and equal_within_percent(
             swap_out.token_out_amount,

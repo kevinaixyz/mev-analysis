@@ -39,6 +39,10 @@ class CallAction(Web3Model):
     def hex_to_str(cls, v: HexBytes) -> str:
         return hexbytes_to_str(v)
 
+    @field_validator("from_", "to", mode="before")
+    @classmethod
+    def lowercase_address(cls, v: str) -> str:
+        return v.lower()
 
 
 class Block(Web3Model):
@@ -50,4 +54,4 @@ class Block(Web3Model):
     receipts: List[Receipt]
 
     def get_filtered_traces(self, hash: str) -> List[Trace]:
-        return [trace for trace in self.traces if trace.transaction_hash == hash]
+        return [trace for trace in self.traces if trace.transaction_hash.lower() == hash.lower()]

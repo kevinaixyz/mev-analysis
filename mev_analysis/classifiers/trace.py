@@ -13,6 +13,7 @@ from mev_analysis.schemas.traces import (
 )
 
 from .specs import ALL_CLASSIFIER_SPECS
+from .. import db
 
 
 class TraceClassifier:
@@ -91,11 +92,16 @@ class TraceClassifier:
                     gas=action.gas,
                     gas_used=result.gas_used if result is not None else None,
                 )
-
+        # update begin
+        # db_session = db.get_inspect_session()
+        # call_data = ABIDecoder.generalised_decode(action.input, db_session)
+        # update end
         return CallTrace(
             **trace.dict(),
             trace_type=trace.type,
             classification=Classification.unknown,
+            function_name=call_data.function_name if call_data is not None else None,
+            function_signature=call_data.function_signature if call_data is not None else None,
             to_address=action.to,
             from_address=action.from_,
             value=action.value,

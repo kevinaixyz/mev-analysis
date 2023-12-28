@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 from mev_analysis.schemas.traces import Protocol
 
@@ -19,3 +19,8 @@ class NftTrade(BaseModel):
     payment_amount: int
     collection_address: str
     token_id: int
+
+    @field_validator("seller_address", "buyer_address", "payment_token_address", "collection_address", mode="before")
+    @classmethod
+    def lowercase_address(cls, v: str) -> str:
+        return v.lower()

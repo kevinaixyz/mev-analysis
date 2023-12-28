@@ -21,10 +21,10 @@ def create_nft_trade_from_transfers(
     if len(transfers_to_buyer) != 1 or len(transfers_to_seller) != 1:
         return None
 
-    if transfers_to_buyer[0].token_address != collection_address:
+    if transfers_to_buyer[0].token_address.lower() != collection_address.lower():
         return None
 
-    payment_token_address = transfers_to_seller[0].token_address
+    payment_token_address = transfers_to_seller[0].token_address.lower()
     payment_amount = transfers_to_seller[0].amount
     token_id = transfers_to_buyer[0].amount
 
@@ -79,7 +79,7 @@ def create_swap_from_pool_transfers(
         transfers_to_pool = _filter_transfers(prior_transfers, to_address=pool_address)
 
     if len(transfers_to_pool) == 0:
-        transfers_to_pool = _filter_transfers(child_transfers, to_address=pool_address)
+        transfers_to_pool = _filter_transfers(child_transfers, from_address=pool_address)
 
     if len(transfers_to_pool) == 0:
         return None
@@ -94,7 +94,7 @@ def create_swap_from_pool_transfers(
     transfer_in = transfers_to_pool[-1]
     transfer_out = transfers_from_pool_to_recipient[0]
 
-    if transfer_in.token_address == transfer_out.token_address:
+    if transfer_in.token_address.lower() == transfer_out.token_address.lower():
         return None
 
     return Swap(
@@ -173,10 +173,10 @@ def _filter_transfers(
     filtered_transfers = []
 
     for transfer in transfers:
-        if to_address is not None and transfer.to_address != to_address:
+        if to_address is not None and transfer.to_address.lower() != to_address.lower():
             continue
 
-        if from_address is not None and transfer.from_address != from_address:
+        if from_address is not None and transfer.from_address.lower() != from_address.lower():
             continue
 
         filtered_transfers.append(transfer)
@@ -190,7 +190,7 @@ def get_received_transfer(
     """Get transfer from AAVE to liquidator"""
 
     for transfer in child_transfers:
-        if transfer.to_address == liquidator:
+        if transfer.to_address.lower() == liquidator.lower():
             return transfer
 
     return None
@@ -202,7 +202,7 @@ def get_debt_transfer(
     """Get transfer from liquidator to AAVE"""
 
     for transfer in child_transfers:
-        if transfer.from_address == liquidator:
+        if transfer.from_address.lower() == liquidator.lower():
             return transfer
 
     return None

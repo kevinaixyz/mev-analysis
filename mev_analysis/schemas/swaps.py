@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 from mev_analysis.schemas.traces import Protocol
 
@@ -20,3 +20,13 @@ class Swap(BaseModel):
     token_out_amount: int
     protocol: Protocol
     error: Optional[str] = None
+
+    @field_validator("contract_address",
+                     "from_address",
+                     "to_address",
+                     "token_in_address",
+                     "token_out_address",
+                     mode="before")
+    @classmethod
+    def lowercase_address(cls, v: str) -> str:
+        return v.lower()

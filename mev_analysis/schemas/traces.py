@@ -104,6 +104,11 @@ class CallTrace(ClassifiedTrace):
     to_address: str
     from_address: str
 
+    @field_validator("to_address","from_address", mode="before")
+    @classmethod
+    def lowercase_address(cls, v: str) -> str:
+        return v.lower()
+
 
 class DecodedCallTrace(CallTrace):
     inputs: Dict[str, Any]

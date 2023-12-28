@@ -90,9 +90,9 @@ async def fetch_base_fee(
         write_base_fee(trace_db_session, block_number, base_fee)
 
 
-def load_flashbot_blocks() -> List[int]:
+def load_flashbot_blocks(ascending: bool = False) -> List[int]:
     blocks_df = pd.read_csv(PARSED_BLOCKS_PATH)
-    blocks_df = blocks_df.sort_values('block_number')
+    blocks_df = blocks_df.sort_values('block_number', ascending=ascending)
     return blocks_df['block_number'].tolist()
 
 

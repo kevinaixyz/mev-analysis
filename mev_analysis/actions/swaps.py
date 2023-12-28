@@ -23,9 +23,17 @@ def get_swaps(traces: List[ClassifiedTrace]) -> List[Swap]:
 
 
 def _get_swaps_for_transaction(traces: List[ClassifiedTrace]) -> List[Swap]:
+    swaps: List[Swap] = []
+    # # Updated start
+    # for trace in traces:
+    #     if trace.classification == Classification.swap:
+    #         classifier = get_classifier(trace)
+    #         if classifier is not None and issubclass(classifier, SwapClassifier):
+    #             return classifier.parse_swap(trace, prior_transfers, child_transfers)
+    #         return None
+    # # Updated end
     ordered_traces = list(sorted(traces, key=lambda t: t.trace_address))
 
-    swaps: List[Swap] = []
     prior_transfers: List[Transfer] = []
 
     for trace in ordered_traces:

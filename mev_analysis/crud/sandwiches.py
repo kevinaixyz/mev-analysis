@@ -6,6 +6,7 @@ from mev_analysis.schemas.sandwiches import Sandwich
 
 from .shared import delete_by_block_range
 
+from sqlalchemy import text
 
 def delete_sandwiches_for_blocks(
     db_session,
